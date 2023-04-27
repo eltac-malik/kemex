@@ -1,0 +1,33 @@
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid silver;
+    background-color: var(--main-color);
+    padding: 0 20px;
+}
+.logo {
+    width: 120px;
+}
+.logo img {
+    width: 100%;
+}
+.ul {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.ul li {
+    margin: 0 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.ul li:hover {
+    color: var(--light-color);
+    transition: 0.3s;
+}
