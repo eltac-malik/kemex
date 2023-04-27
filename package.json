@@ -15,6 +15,7 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.1",
     "aos": "^2.3.4",
+    "formik": "^2.2.9",
     "i18next": "^22.4.15",
     "i18next-browser-languagedetector": "^7.0.1",
     "react": "^18.2.0",
@@ -22,7 +23,8 @@
     "react-i18next": "^12.2.2",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.10.0",
-    "valtio": "^1.10.4"
+    "valtio": "^1.10.4",
+    "yup": "^1.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
