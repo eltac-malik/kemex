@@ -5,10 +5,14 @@ import Drawer from '@mui/material/Drawer';
 
 import {Navbar} from '#/Navbar'
 import {state} from 'state'
+import {widthByPercent} from 'shared/common'
+import {useScreen} from 'shared/hooks'
 
 
 export const Layout = ({children}) => {
   const snap = useSnapshot(state)
+
+  const isMobile = useScreen()
 
   const toggleDrawer = () => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -27,7 +31,9 @@ export const Layout = ({children}) => {
             open={snap.drawer}
             onClose={toggleDrawer()}
           >
-            salam
+            <div style={{width:widthByPercent(isMobile ? 70 : 100)}}>
+
+            </div>
           </Drawer>
         </React.Fragment>
       ))}

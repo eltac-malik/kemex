@@ -1,0 +1,1 @@
+export const widthByPercent = (percent) => window.innerWidth * percent/100
