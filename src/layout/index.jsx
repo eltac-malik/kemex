@@ -42,8 +42,8 @@ export const Layout = ({ children }) => {
                 width: widthByPercent(isMobile ? 70 : 100),
               }}
             >
-              <span
-                className={`text-stone-800 hover:text-red-400 font-bold cursor-pointer animate-pulse p-4 mt-1`}
+              <span 
+                className={`text-stone-800 hover:text-red-400 font-bold cursor-pointer animate-pulse p-4 mt-1 min-[600px]:hidden `}
                 onClick={closeDrawer}
               >
                 <CloseIcon />

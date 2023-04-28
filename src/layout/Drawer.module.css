@@ -1,3 +1,6 @@
-.close-button{
-    font-weight: bold;
-}
+@media (max-width: 600px) {
+    .modal-close {
+      display: none;
+    }
+  }
+  
