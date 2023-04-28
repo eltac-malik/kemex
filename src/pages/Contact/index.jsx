@@ -3,11 +3,10 @@ import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-
-import { BsArrowRight } from 'react-icons/bs';
-import { BsFacebook } from 'react-icons/bs';
-import { BsInstagram} from 'react-icons/bs';
-import { BsTwitter} from 'react-icons/bs';
+import { ArrowRight } from "icons";
+import { Facebook } from "icons";
+import { Instagram } from "icons";
+import { Twitter } from "icons";
 
 import style from "./Contact.module.css";
 
@@ -28,13 +27,15 @@ const initialValues = {
 export const Contact = () => {
   return (
     <div className={style.contact}>
-      <div className={style.form }>
+      <div className={style.form}>
         <div className={`style.contac_info text-start gap-y-14`}>
           <p className={`text-red-600 text-xl font-bold`}>CONTACT US NOW</p>
           <h2 className="text-5xl	mt-5 font-bold">
             HAPPY TO ANSWER ALL <br /> YOUR QUESTIONS
           </h2>
-          <p className={`mt-5 text-2xl `}>Call us for all your questions today.</p>
+          <p className={`mt-5 text-2xl `}>
+            Call us for all your questions today.
+          </p>
           <div className="flex">
             <div className={`w-44 mt-5`}>
               <h3>OUR ADRESSES</h3>
@@ -60,7 +61,9 @@ export const Contact = () => {
             <div className={`w-44 mt-5 ml-10`}>
               <h3>SOCIAL</h3>
               <p className="flex gap-5 mt-5 flex ">
-                <BsFacebook className="hover:text-orange-700"/> <BsInstagram className="hover:text-orange-700"/> <BsTwitter className="hover:text-orange-700"/>
+                <Facebook className="hover:text-orange-700" />{" "}
+                <Instagram className="hover:text-orange-700" />{" "}
+                <Twitter className="hover:text-orange-700" />
               </p>
             </div>
           </div>
@@ -146,17 +149,17 @@ export const Contact = () => {
                     className="text-red-500"
                   />
                 </div>
-                    <div
-                    className={`flex justify-end`}
-                    >
-                    <button
-                  type="submit"
-                  className="border-2 border-black hover:bg-gray-700 hover:text-white text-black font-bold py-2 px-4 flex"
-                >
-                  Send message <span ><BsArrowRight className={`ml-2 mt-1 text-lg`}/></span>
-                </button>
-                    </div>
-       
+                <div className={`flex justify-end`}>
+                  <button
+                    type="submit"
+                    className="border-2 border-black hover:bg-gray-700 hover:text-white text-black font-bold py-2 px-4 flex"
+                  >
+                    Send message{" "}
+                    <span>
+                      <ArrowRight className={`ml-2 mt-1 text-lg`} />
+                    </span>
+                  </button>
+                </div>
               </Form>
             )}
           </Formik>
