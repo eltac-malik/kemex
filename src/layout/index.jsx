@@ -23,6 +23,10 @@ export const Layout = ({ children }) => {
     state.drawer = !state.drawer;
   };
 
+  const closeDrawer = () => {
+    state.drawer = false;
+  };
+
   return (
     <div>
       {["right"].map((anchor) => (
@@ -32,16 +36,17 @@ export const Layout = ({ children }) => {
             <div
               style={{
                 width: widthByPercent(isMobile ? 70 : 100),
-                backgroundColor: "black",
-                padding: "308.5px",
-                color: "white",
               }}
             >
-              <h1 style={{
-                color: 'orange',
-                fontSize: '45px',
-                marginTop: '0px'
-              }}>Contact Details</h1>
+              <span onClick={closeDrawer}>X</span>
+              <h1
+                style={{
+                  color: "orange",
+                  fontSize: "45px",
+                }}
+              >
+                Contact Details
+              </h1>
               <ul>
                 <li>Address: 123 Main Street, City, State</li>
                 <li>Phone: 555-1234</li>
