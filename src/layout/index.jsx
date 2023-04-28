@@ -2,11 +2,14 @@ import * as React from "react";
 import { useSnapshot } from "valtio";
 
 import Drawer from "@mui/material/Drawer";
+import CloseIcon from '@mui/icons-material/Close';
 
 import { Navbar } from "#/Navbar";
 import { state } from "state";
 import { widthByPercent } from "shared/common";
 import { useScreen } from "shared/hooks";
+
+import style from './Drawer.module.css'
 
 export const Layout = ({ children }) => {
   const snap = useSnapshot(state);
@@ -38,12 +41,10 @@ export const Layout = ({ children }) => {
                 width: widthByPercent(isMobile ? 70 : 100),
               }}
             >
-              <span onClick={closeDrawer}>X</span>
+              <span className={`text-stone-800 font-bold p-4`} onClick={closeDrawer}><CloseIcon/></span>
               <h1
-                style={{
-                  color: "orange",
-                  fontSize: "45px",
-                }}
+                className={`text-orange-600 font-2xl`}
+                
               >
                 Contact Details
               </h1>
