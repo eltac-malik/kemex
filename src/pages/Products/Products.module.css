@@ -1,0 +1,19 @@
+.products {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.first_section {
+    color: var(--bg-dark);
+    background-color: var(--light-color);
+}
+
+@media (max-width:var(--width-900)) {
+    .first_section {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
