@@ -9,13 +9,14 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .contac_info {
+
     width: 50%;
-    background-color: blue;
 }
+
 
 .form_box {
     width: 50%;
