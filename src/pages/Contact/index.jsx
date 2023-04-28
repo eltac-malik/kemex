@@ -30,11 +30,11 @@ export const Contact = () => {
     <div className={style.contact}>
       <div className={style.form }>
         <div className={`style.contac_info text-start gap-y-14`}>
-          <p className={`text-red-600`}>CONTACT US NOW</p>
+          <p className={`text-red-600 text-xl font-bold`}>CONTACT US NOW</p>
           <h2 className="text-5xl	mt-5 font-bold">
             HAPPY TO ANSWER ALL <br /> YOUR QUESTIONS
           </h2>
-          <p className={`mt-5 `}>Call us for all your questions today.</p>
+          <p className={`mt-5 text-2xl `}>Call us for all your questions today.</p>
           <div className="flex">
             <div className={`w-44 mt-5`}>
               <h3>OUR ADRESSES</h3>
@@ -59,7 +59,7 @@ export const Contact = () => {
             </div>
             <div className={`w-44 mt-5 ml-10`}>
               <h3>SOCIAL</h3>
-              <p className="flex gap-5 mt-5 ">
+              <p className="flex gap-5 mt-5 flex ">
                 <BsFacebook className="hover:text-orange-700"/> <BsInstagram className="hover:text-orange-700"/> <BsTwitter className="hover:text-orange-700"/>
               </p>
             </div>
