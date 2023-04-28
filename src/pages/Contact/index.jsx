@@ -3,7 +3,11 @@ import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
+
 import { BsArrowRight } from 'react-icons/bs';
+import { BsFacebook } from 'react-icons/bs';
+import { BsInstagram} from 'react-icons/bs';
+import { BsTwitter} from 'react-icons/bs';
 
 import style from "./Contact.module.css";
 
@@ -24,7 +28,7 @@ const initialValues = {
 export const Contact = () => {
   return (
     <div className={style.contact}>
-      <div className={style.form}>
+      <div className={style.form }>
         <div className={`style.contac_info text-start gap-y-14`}>
           <p className={`text-red-600`}>CONTACT US NOW</p>
           <h2 className="text-5xl	mt-5 font-bold">
@@ -55,8 +59,8 @@ export const Contact = () => {
             </div>
             <div className={`w-44 mt-5 ml-10`}>
               <h3>SOCIAL</h3>
-              <p>
-                <a href="mailto:webmaster@example.com">webmaster@example.com</a>
+              <p className="flex gap-5 mt-5 ">
+                <BsFacebook className="hover:text-orange-700"/> <BsInstagram className="hover:text-orange-700"/> <BsTwitter className="hover:text-orange-700"/>
               </p>
             </div>
           </div>
@@ -143,13 +147,13 @@ export const Contact = () => {
                   />
                 </div>
                     <div
-                    className="text-end"
+                    className={`flex justify-end`}
                     >
                     <button
                   type="submit"
-                  className="border-2 border-black hover:bg-blue-700 text-black font-bold py-2 px-4 flex"
+                  className="border-2 border-black hover:bg-gray-700 hover:text-white text-black font-bold py-2 px-4 flex"
                 >
-                  Send message <BsArrowRight className="border-l-2"/>
+                  Send message <span ><BsArrowRight className={`ml-2 mt-1 text-lg`}/></span>
                 </button>
                     </div>
        
