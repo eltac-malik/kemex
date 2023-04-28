@@ -1,6 +1,6 @@
 import React from "react";
 
-import purisafWater from "../../../assets/img/neutra-sul-professional-grade-oxidizer_1024x1024.jpg";
+import purisafWater from "assets/img/neutra-sul-professional-grade-oxidizer_1024x1024.jpg";
 // eslint-disable-next-line react/prop-types
 export const Product = ({ title, image, form, application, specification }) => {
   return (

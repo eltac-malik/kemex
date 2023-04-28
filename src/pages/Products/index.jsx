@@ -1,12 +1,11 @@
 import React from "react";
 
 import { Product } from "./Product";
-import { products } from "./Data";
+import { products } from "shared/mock";
 import style from "./Products.module.css";
-import Header from "../../components/Header/index.jsx";
+import Header from "#/Header/index.jsx";
 
 export const Products = () => {
-  console.log(products);
   return (
     <div
       className={`${style.products} h-screen w-full flex bg-gray-800 overflow-y-auto`}

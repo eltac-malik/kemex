@@ -10,7 +10,7 @@
     background-color: var(--light-color);
 }
 
-@media (max-width:900px) {
+@media (max-width:var(--width-900)) {
     .first_section {
         flex-direction: column;
         justify-content: flex-start;
