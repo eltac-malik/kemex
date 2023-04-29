@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import './shared/lang/i18n/index'
 
 import {Layout} from './layout'
 import {Home} from '@/Home'
