@@ -1,0 +1,17 @@
+.textdark {
+    color: var(--bg-dark) !important;
+    font-weight: bold !important;
+    transition: all 0.3s !important;
+}
+.textlight {
+    color: var(--dark-color) !important;
+    font-weight: bold !important;
+    text-decoration: underline !important;
+}
+.textdark:hover {
+    transition: all 0.3s !important;
+    text-decoration: underline !important;
+}
+.slashdark {
+    color: var(--bg-dark) !important;
+}
