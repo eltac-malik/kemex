@@ -9,4 +9,6 @@ export const IMAGE = {
     LOGO_PNG:logoPng,
     EMPLOYEERS:employeers,
     NOBIAN:nobian
+    
+
 }
