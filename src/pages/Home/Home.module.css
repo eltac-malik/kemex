@@ -118,7 +118,7 @@
   object-fit: cover;
 }
 
-@media (max-width: 900px) {
+@media (max-width:900px) {
   .first_section {
     flex-direction: column;
     justify-content: flex-start;
