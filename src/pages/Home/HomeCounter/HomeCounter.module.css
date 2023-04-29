@@ -1,0 +1,48 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import '/src/assets/style/root.css';
+
+#counter_stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bg-dark);
+    color: aliceblue;
+    padding:10px 50px;
+    /* padding: 100px 0; */
+}
+
+.counter-head h1{
+    text-align: center;
+    margin-bottom: 0;
+    margin: 10px 0 0 0;
+    font-size: 3rem;
+    font-weight: 800;
+}
+.counter-head p{
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 10px;
+    font-weight: 400;
+    line-height: 2;
+    margin: 20px 0 0;
+}
+
+/*/ start count stats /*/ 
+
+section#counter-stats {
+	display: flex;
+	justify-content: center;
+	/* margin-top: 100px; */
+}
+
+#stats {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#stats i {
+  color: var(--light-color);
+  font-size: 40px;
+}

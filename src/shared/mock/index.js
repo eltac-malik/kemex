@@ -79,4 +79,5 @@ export const products = [
         application: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, veritatis!",
         specification: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, veritatis!"
     },
+    
 ]
