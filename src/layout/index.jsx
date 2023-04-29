@@ -2,7 +2,13 @@ import * as React from "react";
 import { useSnapshot } from "valtio";
 
 import Drawer from "@mui/material/Drawer";
-import CloseIcon from "@mui/icons-material/Close";
+
+import { Close } from "../assets/icons";
+
+import { Facebook } from "icons";
+import { Instagram } from "icons";
+import { Twitter } from "icons";
+
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
@@ -10,7 +16,15 @@ import { Navbar } from "#/Navbar";
 import { state } from "state";
 import { widthByPercent } from "shared/common";
 import { useScreen } from "shared/hooks";
-import style from "./Drawer.module.css";
+
+
+const initialValues = {
+  name: "",
+  email: "",
+  phone: "",
+  textarea: "",
+};
+
 
 export const Layout = ({ children }) => {
   const snap = useSnapshot(state);
@@ -42,12 +56,14 @@ export const Layout = ({ children }) => {
                 width: widthByPercent(isMobile ? 70 : 100),
               }}
             >
-              <span 
-                className={`text-stone-800 hover:text-red-400 font-bold cursor-pointer animate-pulse p-4 mt-1 min-[600px]:hidden `}
+
+              <Close
+                size={40}
+                className={`cursor-pointer hover:text-red-600 hover:animate-pulse pt-2 decoration-gray-700 transition duration-300`}
                 onClick={closeDrawer}
-              >
-                <CloseIcon />
-              </span>
+              />
+
+
               <h1 className={`text-orange-600 p-2 text-center text-2xl/[45px]`}>
                 Contact Details
               </h1>
@@ -60,7 +76,12 @@ export const Layout = ({ children }) => {
                   Email: example@example.com
                 </li>
               </ul>
-              <Formik>
+              <Formik
+                initialValues={initialValues}
+                onSubmit={(values) => {
+                  console.log(values);
+                }}
+              >
                 <Form className="bg-gray-100 rounded-lg p-6 m-2">
                   <div className="mb-4">
                     <label><h1 className={`text-orange-600 text-center p-2 text-2xl/[45px]`}>HAPPY TO ANSWER YOUR QUESTIONS</h1></label>
@@ -111,12 +132,25 @@ export const Layout = ({ children }) => {
                     <ErrorMessage name="message\" />{" "}
                   </div>
 
-                  <button
-                    type="submit"
-                    className="bg-gray-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline animate-pulse"
-                  >
-                    Submit
-                  </button>
+                  <div className={`flex flex-wrap flex-row justify-between`}>
+                    <div>
+                      <button
+                        type="submit"
+                        className="bg-gray-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:animate-pulse transition duration-300"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                    <div>
+                      <div className="ml-1.5">Social</div>
+                      <div className="flex flex-row gap-2 cursor-pointer  ">
+                        <Facebook className="hover:text-orange-700 hover:animate-pulse" />
+                        <Instagram className="hover:text-orange-700 hover:animate-pulse " />
+                        <Twitter className="hover:text-orange-700 hover:animate-pulse" />
+                      </div>
+                    </div>
+                  </div>
+
                 </Form>
               </Formik>
             </div>
