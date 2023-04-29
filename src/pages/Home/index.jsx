@@ -6,7 +6,6 @@ import style from "./Home.module.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { HomeCounter } from "./HomeCounter/HomeCounter";
 import HomeCarousel from "./HomeCarousel/HomeCarousel";
-import HomeSlider from "./HomeSlider/HomeSlider";
 
 const SecondSectionPart = ({ title, image }) => {
   return (
@@ -88,7 +87,6 @@ export const Home = () => {
         <HomeCarousel />
       </div>
 
-      <HomeSlider/>
     </div>
   );
 };
