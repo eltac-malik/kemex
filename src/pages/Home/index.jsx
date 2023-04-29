@@ -1,10 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React,{useEffect, useState} from 'react';
 
+<<<<<<< HEAD
+import {IMAGE} from 'assets/img'
+import {mainTitles} from 'shared/constant'
+import style from './Home.module.css';
+=======
 import { IMAGE } from "assets/img";
 import { mainTitles } from "shared/constant";
 
 import style from "./Home.module.css";
 import {AiOutlineArrowRight} from "react-icons/ai"
+>>>>>>> a2eebae44f8e0685b0d2d71e97b99cc318ba1ec6
 
 const SecondSectionPart = ({ title, image }) => {
   return (
@@ -22,8 +28,29 @@ const SecondSectionPart = ({ title, image }) => {
 };
 
 export const Home = () => {
-  const [count, setCount] = useState(0);
+    const [count,setCount] = useState(0)
+    
+    useEffect(()=>{
+        setTimeout(()=>{
+            count === mainTitles.length-1 ?
+            setCount(0) : setCount(count + 1)
+        },5000)
+    },[count])
 
+<<<<<<< HEAD
+	return (
+		<div className={style.home}>
+			<div className={style.first_section}>
+				<div className={style.data} data-aos="fade-up">
+					<h1>{mainTitles[count].t1}</h1>
+					<h2>{mainTitles[count].t2}</h2>
+				</div>
+				<p className={style.employeers} data-aos="zoom-in-down"><img src={IMAGE.EMPLOYEERS} alt=""/></p>
+			</div>
+		</div>
+	);
+};
+=======
   useEffect(() => {
     const interval = setInterval(() => {
       setCount(count => (count + 1) % mainTitles.length);
@@ -50,3 +77,4 @@ export const Home = () => {
     </div>
   );
 };
+>>>>>>> a2eebae44f8e0685b0d2d71e97b99cc318ba1ec6
