@@ -22,11 +22,11 @@ export const Product = ({ title, image, form, application, specification }) => {
       options={defaultOptions}
       className="col-span-4 sm:col-span-5 md:col-span-2 lg:col-span-1 xl:col-span-1 flex flex-col items-center"
     >
-      <div className="bg-white rounded-lg mt-5 border-solid border-2">
+      <div className="bg-white rounded-lg mt-4 border-solid border-2">
         <img src={purisafWater} className="h-60 rounded-md" alt="" />
       </div>
       <div className="bg-white shadow-lg rounded-lg -mt-4 w-70 border-solid border-2">
-        <div className="py-5 px-5">
+        <div className="py-3 px-3">
           <span className="font-bold text-gray-800 text-lg">{title}</span>
           <div className="flex flex-col  items-start justify-between">
             <div className="text-sm text-gray-600 font-light">

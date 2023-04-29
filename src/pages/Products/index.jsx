@@ -27,10 +27,10 @@ export const Products = () => {
   return (
     <div className={`${style.products} h-screen w-full flex bg-gray-800 `}>
       <main className={`${style.first_section} w-full`}>
-        <div className="px-10 mt-5 mb-5">
+        <div className="px-10 mt-4 mb-4">
           <Header title="Home" subtitle="Products" />
           <div
-            className={`${style.search_box} pt-5 pl-5 flex justify-end w-full`}
+            className={`${style.search_box} pt-2 pl-2 flex justify-start w-full`}
           >
             <SearchBox
               onChange={(e, val) => handleFilter(val)}
@@ -40,7 +40,7 @@ export const Products = () => {
         </div>
         <div className="flex">
           <div
-            className={`${style.side_bar} pt-5 pl-5 pr-5 w-auto`}
+            className={`${style.side_bar} pt-4 pl-4 pr-4 w-auto`}
             style={{
               borderRight: "1px solid silver",
             }}
