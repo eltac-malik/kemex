@@ -60,7 +60,7 @@ export const Contact = () => {
             </div>
             <div className={`w-44 mt-5 ml-10`}>
               <h3>SOCIAL</h3>
-              <p className="flex gap-5 mt-5 flex ">
+              <p className="flex gap-5 mt-5  ">
                 <Facebook className="hover:text-orange-700" />{" "}
                 <Instagram className="hover:text-orange-700" />{" "}
                 <Twitter className="hover:text-orange-700" />
