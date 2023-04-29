@@ -28,29 +28,29 @@ export const Contact = () => {
   return (
     <div className={style.contact}>
       <div className={style.form}>
-        <div className={`style.contac_info text-start gap-y-14 min-[390px]:text-center`}>
+        <div className={`style.contac_info text-start gap-y-14`}>
           <p className={`text-red-600 text-xl font-bold`}>CONTACT US NOW</p>
-          <h2 className="text-5xl	mt-5 font-bold  min-[390px]:text-3xl">
+          <h2 className="text-5xl	mt-5 font-bold">
             HAPPY TO ANSWER ALL <br /> YOUR QUESTIONS
           </h2>
           <p className={`mt-5 text-2xl `}>
             Call us for all your questions today.
           </p>
-          <div className="flex  flex-wrap">
-            <div className={`w-44 mt-5  max-[648px]:w-full`}>
+          <div className="flex">
+            <div className={`w-44 mt-5`}>
               <h3>OUR ADRESSES</h3>
               <p>Long Hills Dr 351, New York 07078, United States</p>
             </div>
-            <div className={`w-44 mt-5 ml-10  max-[648px]:w-full  `}>
+            <div className={`w-44 mt-5 ml-10`}>
               <h3>EMAIL</h3>
               <p>
                 <a href="mailto:webmaster@example.com">webmaster@example.com</a>
               </p>
             </div>
           </div>
-          <div className="flex  flex-wrap ">
-            <div className={`w-44 mt-5   max-[648px]:w-full`}>
-              <h3 className="text-bold">PHONES</h3>
+          <div className="flex">
+            <div className={`w-44 mt-5`}>
+              <h3>PHONES</h3>
               <p>
                 <a href="tel:+4733378901">+47 333 78 901</a>
               </p>
@@ -58,11 +58,11 @@ export const Contact = () => {
                 <a href="tel:+4733378901">+47 333 78 901</a>
               </p>
             </div>
-            <div className={`w-44 mt-5 ml-10 max-[648px]:w-full`}>
+            <div className={`w-44 mt-5 ml-10`}>
               <h3>SOCIAL</h3>
-              <p className=" gap-5 mt-5 ml-8 flex max-[648px]:w-full ">
-                <Facebook className="hover:text-orange-700" />
-                <Instagram className="hover:text-orange-700" />
+              <p className="flex gap-5 mt-5 flex ">
+                <Facebook className="hover:text-orange-700" />{" "}
+                <Instagram className="hover:text-orange-700" />{" "}
                 <Twitter className="hover:text-orange-700" />
               </p>
             </div>
@@ -78,7 +78,7 @@ export const Contact = () => {
             }}
           >
             {({ errors, touched }) => (
-              <Form className={`w-96  `}>
+              <Form className={`w-96`}>
                 <div className="mb-4">
                   <Field
                     type="text"
