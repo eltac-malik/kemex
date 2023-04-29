@@ -3,6 +3,6 @@
     --dark-color:#768a96;
     --light-color:#dfebf6;
     --bg-dark:#44576d;
-    --page-height:calc(100vh - 60px)
-    --width-900:900px;
+    --page-height:calc(100vh - 60px);
+    --responsive-width: 900px;
 }
