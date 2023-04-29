@@ -1,16 +1,10 @@
 import React,{useEffect, useState} from 'react';
 
-<<<<<<< HEAD
-import {IMAGE} from 'assets/img'
-import {mainTitles} from 'shared/constant'
-import style from './Home.module.css';
-=======
 import { IMAGE } from "assets/img";
 import { mainTitles } from "shared/constant";
 
 import style from "./Home.module.css";
 import {AiOutlineArrowRight} from "react-icons/ai"
->>>>>>> a2eebae44f8e0685b0d2d71e97b99cc318ba1ec6
 
 const SecondSectionPart = ({ title, image }) => {
   return (
