@@ -18,7 +18,7 @@ export const Navbar = () => {
         <ul className={style.ul}>
             <Link className='link' to='/'>Home</Link>
             <li>About</li>
-            <li>Products</li>
+            <Link className='link' to='/products'>Products</Link>
             <Link className='link' to='/contact'>Contact</Link>
         </ul>
         {/* <BasicSelect/> */}
