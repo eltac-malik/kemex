@@ -10,7 +10,7 @@ import brand3 from './brand3.png'
 import brand4 from './brand4.png'
 import about from './about.jpeg'
 import train from './train.jpg'
-
+import nobian from './nobian.jpg'
 
 
 
@@ -18,6 +18,7 @@ export const IMAGE = {
     LOGO:logo,
     LOGO_PNG:logoPng,
     EMPLOYEERS:employeers,
+    NOBIAN:nobian,
     SLIDE1:slide1,
     SLIDE2:slide2,
     SLIDE3:slide3,
