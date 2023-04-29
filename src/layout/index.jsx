@@ -2,11 +2,13 @@ import * as React from "react";
 import { useSnapshot } from "valtio";
 
 import Drawer from "@mui/material/Drawer";
+
 import { Close } from "../assets/icons";
 
 import { Facebook } from "icons";
 import { Instagram } from "icons";
 import { Twitter } from "icons";
+
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
@@ -15,12 +17,14 @@ import { state } from "state";
 import { widthByPercent } from "shared/common";
 import { useScreen } from "shared/hooks";
 
+
 const initialValues = {
   name: "",
   email: "",
   phone: "",
   textarea: "",
 };
+
 
 export const Layout = ({ children }) => {
   const snap = useSnapshot(state);
@@ -52,11 +56,13 @@ export const Layout = ({ children }) => {
                 width: widthByPercent(isMobile ? 70 : 100),
               }}
             >
+
               <Close
                 size={40}
                 className={`cursor-pointer hover:text-red-600 hover:animate-pulse pt-2 decoration-gray-700 transition duration-300`}
                 onClick={closeDrawer}
               />
+
 
               <h1 className={`text-orange-600 p-2 text-center text-2xl/[45px]`}>
                 Contact Details
@@ -78,13 +84,7 @@ export const Layout = ({ children }) => {
               >
                 <Form className="bg-gray-100 rounded-lg p-6 m-2">
                   <div className="mb-4">
-                    <label>
-                      <h1
-                        className={`text-orange-600 text-center p-2 text-2xl/[45px]`}
-                      >
-                        HAPPY TO ANSWER YOUR QUESTIONS
-                      </h1>
-                    </label>
+                    <label><h1 className={`text-orange-600 text-center p-2 text-2xl/[45px]`}>HAPPY TO ANSWER YOUR QUESTIONS</h1></label>
                     <label
                       htmlFor="name"
                       className="block text-gray-700 font-bold mb-2"
@@ -131,6 +131,7 @@ export const Layout = ({ children }) => {
                     />
                     <ErrorMessage name="message\" />{" "}
                   </div>
+
                   <div className={`flex flex-wrap flex-row justify-between`}>
                     <div>
                       <button
@@ -149,6 +150,7 @@ export const Layout = ({ children }) => {
                       </div>
                     </div>
                   </div>
+
                 </Form>
               </Formik>
             </div>

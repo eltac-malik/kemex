@@ -12,3 +12,16 @@ export const mainTitles = [
         t2:"Kemex International 2018-ci ildə yaradılıb sənaye kimyasının mütəxəssisləri və bu gün tədarükü ilə məşğuldur sənaye kimyası beynəlxalq ticarət mərtəbələrinə."
     }
 ]
+
+
+export const mainImages = [
+ {
+    img:"../assets/img/industry1.jpg"
+ },
+{
+    img:"../assets/img/industry2.jpg"
+},
+{
+    img:"../assets/img/industry3.jpg"
+}
+]
