@@ -18,7 +18,6 @@ export const IMAGE = {
     LOGO:logo,
     LOGO_PNG:logoPng,
     EMPLOYEERS:employeers,
-<<<<<<< HEAD
     SLIDE1:slide1,
     SLIDE2:slide2,
     SLIDE3:slide3,
@@ -28,9 +27,4 @@ export const IMAGE = {
     BRAND4:brand4,
     ABOUT:about,
     TRAIN:train
-=======
-    NOBIAN:nobian
-    
-
->>>>>>> a2eebae44f8e0685b0d2d71e97b99cc318ba1ec6
 }

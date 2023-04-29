@@ -28,7 +28,7 @@ export const About = () => {
       <div className='row' id={style.why}>
        
         <div className='col-md-6'>
-          <div className={style.imgContainer}>
+          <div className={style['text-Container']}>
             <h1>Why US?</h1>
             <p>Kemex International was founded in 2018 by industrial chemicals supply chain professionals. The company today is among the market leaders in the CIS region and cooperates with most of the companies in the oil sector, mining, water supply and food industries.</p>
             <p>Added value, customer cost optimization and flexibility are the company's top priorities in building long-term relationships.</p>
