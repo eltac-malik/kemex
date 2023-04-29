@@ -9,14 +9,13 @@ import { Facebook } from "icons";
 import { Instagram } from "icons";
 import { Twitter } from "icons";
 
-
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 import { Navbar } from "#/Navbar";
 import { state } from "state";
 import { widthByPercent } from "shared/common";
 import { useScreen } from "shared/hooks";
-
 
 const initialValues = {
   name: "",
@@ -25,6 +24,13 @@ const initialValues = {
   textarea: "",
 };
 
+const validationSchema = Yup.object().shape({
+  name: Yup.string().required("Please enter your name"),
+  email: Yup.string()
+    .email("Please enter a valid email")
+    .required("Please enter your email"),
+  message: Yup.string().required("Please enter your message"),
+});
 
 export const Layout = ({ children }) => {
   const snap = useSnapshot(state);
@@ -56,18 +62,16 @@ export const Layout = ({ children }) => {
                 width: widthByPercent(isMobile ? 70 : 100),
               }}
             >
-
               <Close
                 size={40}
                 className={`cursor-pointer hover:text-red-600 hover:animate-pulse pt-2 decoration-gray-700 transition duration-300`}
                 onClick={closeDrawer}
               />
 
-
-              <h1 className={`text-orange-600 p-2 text-center text-2xl/[45px]`}>
+              <h1 className={`text-orange-600  text-center text-2xl/[45px]`}>
                 Contact Details
               </h1>
-              <ul className="bg-gray-200 p-8 m-2 rounded-lg">
+              <ul className="bg-gray-200 p-2 m-2 rounded-lg">
                 <li className="text-lg text-gray-700">
                   Address: 123 Main Street, City, State
                 </li>
@@ -81,10 +85,17 @@ export const Layout = ({ children }) => {
                 onSubmit={(values) => {
                   console.log(values);
                 }}
+                validationSchema={validationSchema}
               >
                 <Form className="bg-gray-100 rounded-lg p-6 m-2">
                   <div className="mb-4">
-                    <label><h1 className={`text-orange-600 text-center p-2 text-2xl/[45px]`}>HAPPY TO ANSWER YOUR QUESTIONS</h1></label>
+                    <label>
+                      <h1
+                        className={`text-orange-600 text-center p-2 text-2xl/[45px]`}
+                      >
+                        HAPPY TO ANSWER YOUR QUESTIONS
+                      </h1>
+                    </label>
                     <label
                       htmlFor="name"
                       className="block text-gray-700 font-bold mb-2"
@@ -150,7 +161,6 @@ export const Layout = ({ children }) => {
                       </div>
                     </div>
                   </div>
-
                 </Form>
               </Formik>
             </div>
