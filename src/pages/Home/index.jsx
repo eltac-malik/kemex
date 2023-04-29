@@ -47,7 +47,7 @@ export const Home = () => {
           <div className={style.ss_textarea}>
             <div className={style.line}></div>
             <h1>{mainTitles[count].t1}</h1>
-			<div className={style.ss_textarea}><span>Read more <AiOutlineArrowRight values={{className:'arrow_icon'}}/></span></div>
+			<span>Read more <AiOutlineArrowRight values={{className:'arrow_icon'}}/></span>
           </div>
         </div>
       </div>
