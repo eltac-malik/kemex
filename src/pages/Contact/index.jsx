@@ -13,15 +13,15 @@ import style from "./Contact.module.css";
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
-  phone: Yup.string().required("Phone is required"),
-  textarea: Yup.string().required("Textarea is required"),
+  phone: Yup.number().typeError("That doesn't look like a phone number").positive("A phone number can't start with a minus").integer("A phone number can't include a decimal point").min(8).required('Phone number is required'), 
+   message: Yup.string().required("Message is required"),
 });
 
 const initialValues = {
   name: "",
   email: "",
   phone: "",
-  textarea: "",
+  message: "",
 };
 
 export const Contact = () => {
@@ -60,7 +60,7 @@ export const Contact = () => {
             </div>
             <div className={`w-44 mt-5 ml-10`}>
               <h3>SOCIAL</h3>
-              <p className="flex gap-5 mt-5 flex ">
+              <p className="flex gap-5 mt-5  ">
                 <Facebook className="hover:text-orange-700" />{" "}
                 <Instagram className="hover:text-orange-700" />{" "}
                 <Twitter className="hover:text-orange-700" />
@@ -132,19 +132,18 @@ export const Contact = () => {
 
                 <div className="mb-4">
                   <Field
-                    as="textarea"
-                    name="textarea"
-                    id="textarea"
+                    type="text"
+                    name="message"
+                    id="message"
                     placeholder=" Message"
                     rows={3}
                     className={`border-gray-950 appearance-none border-b-2 w-full py-8 px-2 text-gray-800 leading-tight focus:outline-none focus:shadow-outline placeholder-gray-800  ${
-                      errors.textarea && touched.textarea
-                        ? "border-red-500"
-                        : ""
+                      errors.message && touched.message
+                        ? "border-red-500" : ""
                     }`}
                   />
                   <ErrorMessage
-                    name="textarea"
+                    name="message"
                     component="div"
                     className="text-red-500"
                   />
@@ -152,9 +151,9 @@ export const Contact = () => {
                 <div className={`flex justify-end`}>
                   <button
                     type="submit"
-                    className="border-2 border-black hover:bg-gray-700 hover:text-white text-black font-bold py-2 px-4 flex"
+                    className="border-2 border-black hover:animate-pulse transition duration-200 hover:bg-orange-600 hover:text-white text-black font-bold py-2 px-4 flex"
                   >
-                    Send message{" "}
+                    Send message
                     <span>
                       <ArrowRight className={`ml-2 mt-1 text-lg`} />
                     </span>
