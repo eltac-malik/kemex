@@ -4,6 +4,9 @@ import { useSnapshot } from "valtio";
 import Drawer from "@mui/material/Drawer";
 import { Close } from "../assets/icons";
 
+import { Facebook } from "icons";
+import { Instagram } from "icons";
+import { Twitter } from "icons";
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
@@ -12,6 +15,12 @@ import { state } from "state";
 import { widthByPercent } from "shared/common";
 import { useScreen } from "shared/hooks";
 
+const initialValues = {
+  name: "",
+  email: "",
+  phone: "",
+  textarea: "",
+};
 
 export const Layout = ({ children }) => {
   const snap = useSnapshot(state);
@@ -43,8 +52,12 @@ export const Layout = ({ children }) => {
                 width: widthByPercent(isMobile ? 70 : 100),
               }}
             >
-             <Close size={40}  onClick={closeDrawer}/>
-              
+              <Close
+                size={40}
+                className={`cursor-pointer hover:text-red-600 hover:animate-pulse pt-2 decoration-gray-700 transition duration-300`}
+                onClick={closeDrawer}
+              />
+
               <h1 className={`text-orange-600 p-2 text-center text-2xl/[45px]`}>
                 Contact Details
               </h1>
@@ -57,7 +70,12 @@ export const Layout = ({ children }) => {
                   Email: example@example.com
                 </li>
               </ul>
-              <Formik>
+              <Formik
+                initialValues={initialValues}
+                onSubmit={(values) => {
+                  console.log(values);
+                }}
+              >
                 <Form className="bg-gray-100 rounded-lg p-6 m-2">
                   <div className="mb-4">
                     <label>
@@ -113,13 +131,24 @@ export const Layout = ({ children }) => {
                     />
                     <ErrorMessage name="message\" />{" "}
                   </div>
-
-                  <button
-                    type="submit"
-                    className="bg-gray-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:animate-pulse transition duration-300"
-                  >
-                    Submit
-                  </button>
+                  <div className={`flex flex-wrap flex-row justify-between`}>
+                    <div>
+                      <button
+                        type="submit"
+                        className="bg-gray-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:animate-pulse transition duration-300"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                    <div>
+                      <div className="ml-1.5">Social</div>
+                      <div className="flex flex-row gap-2 cursor-pointer  ">
+                        <Facebook className="hover:text-orange-700 hover:animate-pulse" />
+                        <Instagram className="hover:text-orange-700 hover:animate-pulse " />
+                        <Twitter className="hover:text-orange-700 hover:animate-pulse" />
+                      </div>
+                    </div>
+                  </div>
                 </Form>
               </Formik>
             </div>
