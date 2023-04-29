@@ -2,7 +2,6 @@ import React,{useEffect, useState} from 'react';
 
 import { IMAGE } from "assets/img";
 import { mainTitles } from "shared/constant";
-
 import style from "./Home.module.css";
 import {AiOutlineArrowRight} from "react-icons/ai"
 
@@ -20,6 +19,8 @@ const SecondSectionPart = ({ title, image }) => {
     </div>
   );
 };
+
+
 
 export const Home = () => {
     const [count,setCount] = useState(0)
@@ -54,6 +55,10 @@ export const Home = () => {
         <SecondSectionPart title={mainTitles[(count + 1) % mainTitles.length]} image={IMAGE.NOBIAN} />
         <SecondSectionPart title={mainTitles[(count + 2) % mainTitles.length]} image={IMAGE.NOBIAN} />
       </div>
+      <div className={style.about_section}>
+          <AboutSection/>
+      </div>
     </div>
   );
 };
+
