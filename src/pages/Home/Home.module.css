@@ -1,10 +1,8 @@
-
 .home {
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    flex-direction: column;
 }
 
 .first_section {
@@ -19,91 +17,18 @@
     padding: 0 10%;
     background-color: var(--bg-dark);
 }
-.second_section {
-    width: 100%;
-    height: var(--section-height);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.ss_parts{
-    width: 30%;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-}
-.ss_parts h1{
-    font-size: 40px;
-    color: white;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-.ss_textarea{
-height: 200px;
-width: 80%;
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-gap: 20px;
-}
-
-.ss_textarea span {
-    font-size: 20px;
-    color: white;
-    text-transform: uppercase;
-}
-.ss_textarea svg{
-    width: 20px;
-}
-
-
-.line{
-    background-color: white;
-    height: 2px;
-    width: 400px;
-    z-index: 2;
-}
-.ss_parts img {
-    transform:scale(1, 1);
-    transition: 1s;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-} 
-.ss_parts:hover img{
-transform:scale(1.1, 1.1);
-overflow: hidden;
-}
-
-
 
 .data {
-    width: 50%;
+    width: 70%;
 }
 
 .data h1 {
-    font-size: 40px;
-    color: white;
+    font-size: 30px;
     margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.data h2 {
-    font-size: 20px;
-    color: white;
-    margin-bottom: 10px;
-    text-transform: uppercase;
 }
 .employeers {
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -131,13 +56,4 @@ overflow: hidden;
     .employeers {
         display: none;
     }
-    .second_section{
-        justify-content: center;
-        gap: 10px;
-    }
-    .ss_parts{
-        width: 80%;
-        height: 200px;
-    }
-
 }
