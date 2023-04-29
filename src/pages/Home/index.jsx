@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React,{useEffect, useState} from 'react';
 
 import { IMAGE } from "assets/img";
 import { mainTitles } from "shared/constant";
@@ -23,7 +23,14 @@ const SecondSectionPart = ({ title, image }) => {
 
 
 export const Home = () => {
-  const [count, setCount] = useState(0);
+    const [count,setCount] = useState(0)
+    
+    useEffect(()=>{
+        setTimeout(()=>{
+            count === mainTitles.length-1 ?
+            setCount(0) : setCount(count + 1)
+        },5000)
+    },[count])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -54,5 +61,4 @@ export const Home = () => {
     </div>
   );
 };
-
 
