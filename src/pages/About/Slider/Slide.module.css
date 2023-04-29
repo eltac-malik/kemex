@@ -1,0 +1,17 @@
+.carouselExample img{
+    max-height: 80vh !important;
+    
+}
+.carouselExample h5,.carouselExample p{
+ color: #ffffff !important;
+
+}
+.carouselExample #carousel-indicators button{
+    background-color: #ffffff !important;
+    
+   
+   }
+.carouselExample h5{
+    font-size: 25px;
+    font-weight: bold;
+}
