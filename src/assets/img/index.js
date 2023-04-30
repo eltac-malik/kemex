@@ -12,6 +12,7 @@ import about from './about.jpeg'
 import train from './train.jpg'
 import nobian from './nobian.jpg'
 import chlorineP from './ChlorineProduction.jpg'
+import chlorineP2 from './ChlorineProduction2.jpg'
 
 
 export const IMAGE = {
@@ -28,5 +29,6 @@ export const IMAGE = {
     ABOUT:about,
     TRAIN:train,
     NOBIAN:nobian,
-    CHLORINEPRO:chlorineP
+    CHLORINEPRO:chlorineP,
+    CHLORINEPRO2:chlorineP2
 }
