@@ -3,17 +3,35 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    background-color: var(--light-color);
 }
 
 .first_section {
     color: var(--bg-dark);
     background-color: var(--light-color);
+    padding-bottom: 40px !important;
 }
 
-@media (max-width:var(--width-900)) {
+@media (max-width:900px) {
     .first_section {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+    }
+}
+.side_bar {
+    background-color: var(--light-color);
+}
+@media (max-width:768px) {
+    .side_bar {
+        display: none;
+    }
+}
+.search_box {
+    display: none;
+}
+@media (max-width:768px) {
+    .search_box {
+        display: flex;
     }
 }
