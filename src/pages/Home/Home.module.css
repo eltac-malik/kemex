@@ -153,6 +153,7 @@
     padding: 0;
 }
 .imgContainer{
+    margin: 0 20px;
     height: 100%;
 }
 .imgContainer img{
@@ -191,4 +192,10 @@
     gap: 10px;
     justify-content: center;
   }
+
+  .imgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 }
