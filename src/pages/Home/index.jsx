@@ -60,7 +60,7 @@ export const Home = () => {
       <div>
         <HomeCounter />
         <div className="row" id={style.home_about}>
-          <div className="col-md-6 col-12 col-sm-6 " data-aos="fade-right">
+          <div className="col-md-6 col-12 col-sm-6 " data-aos="fade-up">
             <div className={style.text_Container}>
               <h1>Why US?</h1>
               <p>
@@ -74,19 +74,18 @@ export const Home = () => {
                 meet their needs.
               </p>
               <p>
-              We prioritize building long-term relationships
-                with our clients, and we achieve this by delivering exceptional
-                service and focusing on their specific requirements. At Kemex
-                International, we are committed to maintaining the highest
-                standards of quality, safety, and sustainability in all aspects
-                of our business. Our team of experts is dedicated to staying
-                up-to-date with the latest developments in the industry and
-                delivering innovative solutions to meet our customers' evolving
-                needs.
+                We prioritize building long-term relationships with our clients,
+                and we achieve this by delivering exceptional service and
+                focusing on their specific requirements. At Kemex International,
+                we are committed to maintaining the highest standards of
+                quality, safety, and sustainability in all aspects of our
+                business. Our team of experts is dedicated to staying up-to-date
+                with the latest developments in the industry and delivering
+                innovative solutions to meet our customers' evolving needs.
               </p>
             </div>
           </div>
-          <div className="col-md-6 col-12 col-sm-6" data-aos="fade-left">
+          <div className="col-md-6 col-12 col-sm-6" data-aos="fade-up">
             <div className={style.imgContainer}>
               <img src={IMAGE.CHLORINEPRO} alt="" />
             </div>
@@ -97,12 +96,12 @@ export const Home = () => {
         <HomeCarousel />
       </div>
       <div className="row" id={style.home_about}>
-        <div className="col-md-6 col-12 col-sm-6" data-aos="fade-right">
+        <div className="col-md-6 col-12 col-sm-6" data-aos="fade-up">
           <div className={style.imgContainer}>
             <img src={IMAGE.CHLORINEPRO2} alt="" />
           </div>
         </div>
-        <div className="col-md-6 col-12 col-sm-6 " data-aos="fade-left">
+        <div className="col_p col-md-6 col-12 col-sm-6 " data-aos="fade-up">
           <div className={style.text_Container}>
             <h1>Why Choose Kemex International?</h1>
             <p>
