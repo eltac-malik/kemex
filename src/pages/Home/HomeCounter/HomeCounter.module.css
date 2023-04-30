@@ -46,3 +46,10 @@ section#counter-stats {
   color: var(--light-color);
   font-size: 40px;
 }
+
+
+@media (max-width: 900px) {
+.counter_row{
+margin-bottom: 20px;
+}
+}
