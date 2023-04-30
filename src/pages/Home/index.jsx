@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { IMAGE } from "assets/img";
 import { mainTitles } from "shared/constant";
 import style from "./Home.module.css";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import {RightArrow} from "icons";
 import { HomeCounter } from "./HomeCounter/HomeCounter";
 import HomeCarousel from "./HomeCarousel/HomeCarousel";
 
@@ -17,7 +17,7 @@ const SecondSectionPart = ({ title, image }) => {
         <span className={style.ss_readmore}>
           Read more{" "}
           <div className={style.ss_more}>
-            <AiOutlineArrowRight size={20} />
+            <RightArrow size={20} />
           </div>
         </span>
       </div>
