@@ -9,7 +9,7 @@ import HomeCarousel from "./HomeCarousel/HomeCarousel";
 
 const SecondSectionPart = ({ title, image }) => {
   return (
-    <div className={style.ss_parts}>
+    <div className={style.ss_parts} data-aos="fade-up">
       <img src={image} alt="" />
       <div className={style.ss_textarea}>
         <div className={style.line}></div>
@@ -59,8 +59,8 @@ export const Home = () => {
       </div>
       <div>
         <HomeCounter />
-        <div className="row" id={style.home_about}>
-          <div className="col-md-6 col-12 col-sm-6 ">
+        <div className="row" id={style.home_about} >
+          <div className="col-md-6 col-12 col-sm-6 " data-aos="fade-right">
             <div className={style.text_Container}>
               <h1>Why US?</h1>
               <p>
@@ -76,7 +76,7 @@ export const Home = () => {
               </p>
             </div>
           </div>
-          <div className="col-md-6 col-12 col-sm-6">
+          <div className="col-md-6 col-12 col-sm-6" data-aos="fade-left">
             <div className={style.imgContainer}>
               <img src={IMAGE.CHLORINEPRO} alt="" />
             </div>
@@ -86,7 +86,6 @@ export const Home = () => {
       <div className="mt-10 w-[100%]">
         <HomeCarousel />
       </div>
-
     </div>
   );
 };
