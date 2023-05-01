@@ -6,6 +6,7 @@ import {Home} from '@/Home'
 import {Contact} from '@/Contact'
 import {Products} from '@/Products'
 import {About} from '@/About'
+import './shared/lang/i18n/index'
 
 import './App.css'
 import './assets/style/root.css'
