@@ -22,7 +22,26 @@ export const TR_RU = {
         t2c:'Конкурентное преимущество, созданное командой молодых специалистов за счет надежности, разнообразия и гибкости.',
         t3a: 'Что мы делаем?',
         t3b:'Kemex International была основана в 2018 году специалистами в области промышленной химии и на сегодняшний день занимается поставками промышленной химии на международные торговые площадки.',
+        partners:'ПАРТНЕРЫ',
+        globalCompany: 'Мировые компании полагаются на нас',
+        cardTitle:'Card One',
+        cardInfo:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget velit tristique, sollicitudin leo viverra, suscipit neque. Aliquam ut facilisis urna, in pretium nibh.  Morbi in leo in eros commodo volutpat ac sed dolor.',
+        counterHead: 'Встречная головка',
+        counterAltHead: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, temporibus dolorem? ',
+        searchBar:'Поиск продукта...',
+        contactUsNow: 'СВЯЖИТЕСЬ С НАМИ СЕЙЧАС',
+        answerQuestions:'РАДЫ ОТВЕЧАТЬ НА ВСЕ ВАШИ ВОПРОСЫ',
+        contactText:'Kemex International представлена ​​как в Азербайджане, так и в Грузии и сотрудничает с производителями, расположенными в Италии, Украине, Беларуси, Китае, Индии и других странах.',
+        adress:'НАШИ АДРЕСА',
+        emailI:'ЭЛЕКТРОННАЯ ПОЧТА',
+        phone:'ТЕЛЕФОНЫ',
+        sosialMedia: 'СОЦИАЛЬНЫЕ МЕДИА',
+        sendMessage:'Отправить сообщение',
+        name:'Имя',
+        message: 'СООБЩЕНИЕ',
         
+
+
 
 
 

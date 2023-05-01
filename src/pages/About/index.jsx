@@ -1,11 +1,18 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {IMAGE} from 'assets/img'
 import style from './About.module.css';
 import { Slide } from './Slider/Slide';
 import { Counter } from './Counter/Counter';
 import { Brands } from './Brands/Brands';
+import {useTranslation} from 'react-i18next'
 
 export const About = () => {
+  const {t} = useTranslation()
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage('az');
+  }, ['az','en','ru']);
   return (
     <div>
       <Slide/>
@@ -18,9 +25,9 @@ export const About = () => {
         </div>
         <div className='col-md-6'>
           <div className={style['text-Container']}>
-            <h1>Why US?</h1>
-            <p>Kemex International was founded in 2018 by industrial chemicals supply chain professionals. The company today is among the market leaders in the CIS region and cooperates with most of the companies in the oil sector, mining, water supply and food industries.</p>
-            <p>Added value, customer cost optimization and flexibility are the company's top priorities in building long-term relationships.</p>
+            <h1>{t('why_us')}</h1>
+            <p>{t('abzas1')}</p>
+            <p>{t('abzas2')}</p>
           </div>
         </div>
       </div>
@@ -29,9 +36,9 @@ export const About = () => {
        
         <div className='col-md-6'>
           <div className={style['text-Container']}>
-            <h1>Why US?</h1>
-            <p>Kemex International was founded in 2018 by industrial chemicals supply chain professionals. The company today is among the market leaders in the CIS region and cooperates with most of the companies in the oil sector, mining, water supply and food industries.</p>
-            <p>Added value, customer cost optimization and flexibility are the company's top priorities in building long-term relationships.</p>
+          <h1>{t('why_us')}</h1>
+            <p>{t('abzas1')}</p>
+            <p>{t('abzas2')}</p>
           </div>
         </div>
         <div className='col-md-6'>
