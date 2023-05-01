@@ -22,7 +22,23 @@ export const TR_EN = {
         t2c: 'Competitive advantage created by a team of young professionals through reliability, diversity and flexibility.',
         t3a: 'What are we doing?',
         t3b: 'Kemex International was founded in 2018 by specialists in industrial chemistry and today is engaged in the supply of industrial chemistry to international trading floors.',
-        
+        partners: 'PARTNERS',
+        globalCompany: 'The global companies rely on us',
+        cardTitle:'Card One',
+        cardInfo:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget velit tristique, sollicitudin leo viverra, suscipit neque. Aliquam ut facilisis urna, in pretium nibh.  Morbi in leo in eros commodo volutpat ac sed dolor.',
+        counterHead: 'Counter head',
+        counterAltHead: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, temporibus dolorem? ',
+        searchBar:'Search product...',
+        contactUsNow: 'CONTACT US NOW',
+        answerQuestions: 'HAPPY TO ANSWER ALL  YOUR QUESTIONS',
+        contactText: 'Kemex International is represented both in Azerbaijan and Georgia and cooperates with manufacturers located in Italy, Ukraine, Belarus, China, India and other countries.',
+        adress :'OUR ADRESSES',
+        email:'EMAIL',
+        phone: 'PHONES',
+        sosialMedia: 'SOCIAL MEDIA',
+        sendMessage:'Send message',
+        name: 'Name',
+        message: 'MESSAGE',
 
 
 

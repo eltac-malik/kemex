@@ -21,7 +21,27 @@ export const TR_AZ = {
         t2b: 'Bizimlə işləyin!',
         t2c: 'Gənc mütəxəssislər komandası tərəfindən yaradılmış rəqabət üstünlüyü etibarlılıq, müxtəliflik və çeviklik vasitəsilə.',
         t3a: 'Biz nə edirik?',
-        t3b: 'Kemex International 2018-ci ildə yaradılıb sənaye kimyasının mütəxəssisləri və bu gün tədarükü ilə məşğuldur sənaye kimyası beynəlxalq ticarət mərtəbələrinə.'
+        t3b: 'Kemex International 2018-ci ildə yaradılıb sənaye kimyasının mütəxəssisləri və bu gün tədarükü ilə məşğuldur sənaye kimyası beynəlxalq ticarət mərtəbələrinə.',
+        partners: 'TƏRƏFDAŞLAR',
+        globalCompany: 'Qlobal şirkətlər bizə güvənir',
+        cardTitle:'Card One',
+        cardInfo:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget velit tristique, sollicitudin leo viverra, suscipit neque. Aliquam ut facilisis urna, in pretium nibh.  Morbi in leo in eros commodo volutpat ac sed dolor.',
+        counterHead: 'Rəqəmlərdə Biz',
+        counterAltHead: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, temporibus dolorem? ',
+        searchBar:'Məhsul axtarın...',
+        contactUsNow: ' BİZƏ İNDİ ZƏNG EDİN',
+        answerQuestions:'BÜTÜN SUALLARINIZI CAVAB VERMƏKDƏN MƏNMUNUQ',
+        contactText:'Kemex International həm Azərbaycanda, həm də Gürcüstanda təmsil olunur və İtaliya, Ukrayna, Belorusiya, Çin, Hindistan və digər olkələrdə yerləşən istehsalçılarla əməkdaşlıq edir.',
+        adress:'ÜNVANLARIMIZ',
+        email:'ELEKTRON POÇT',
+        phone: 'TELEFON NÖMRƏSİ',
+        sosialMedia: 'SOSİAL ŞƏBƏKƏLƏR',
+        sendMessage:'Mesaj göndərin',
+        name: 'AD',
+        message: 'MESAJ',
+
+
+
 
 
         

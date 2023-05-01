@@ -5,6 +5,7 @@ import { products } from "shared/mock";
 import style from "./Products.module.css";
 import Header from "#/Header/index.jsx";
 import SearchBox from "#/SearchBar";
+import {useTranslation} from 'react-i18next'
 
 export const Products = () => {
   const [input, setInput] = useState("");
@@ -24,11 +25,19 @@ export const Products = () => {
     console.log("last step 1");
   };
 
+  const {t} = useTranslation()
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage('az');
+  }, ['az','en','ru']);
+
+  
   return (
     <div className={`${style.products} h-screen w-full flex bg-gray-800 `}>
       <main className={`${style.first_section} w-full`}>
         <div className="px-10 mt-4 mb-4">
-          <Header title="Home" subtitle="Products" />
+          <Header title={t('home')} subtitle={t('products')} />
           <div
             className={`${style.search_box} pt-2 pl-2 flex justify-start w-full`}
           >
