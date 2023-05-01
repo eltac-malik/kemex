@@ -84,3 +84,15 @@
     line-height: 2;
     margin: 20px 0 0;
 }
+@media screen and (max-width: 768px) {
+    .partners h1{
+        font-size: 2rem;
+    }
+    .partners p{
+        font-size: 20px;      
+    }
+    #card
+{
+    height: 70px;
+}
+  }

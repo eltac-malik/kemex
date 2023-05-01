@@ -30,4 +30,18 @@
 }
 .imgContainer img{
     height: 100% !important;
+    object-fit: cover;
 }
+@media screen and (max-width: 768px) {
+    .text-Container h1{
+        margin: 40px 0 0 0;
+        font-size: 2rem;
+    }
+    .text-Container p{
+        font-size: 15px;
+        padding: 20px 10px;
+        font-weight: 400;
+        line-height: 2;
+        margin: 0;
+    }
+  }

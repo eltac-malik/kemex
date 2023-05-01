@@ -42,7 +42,7 @@ export const About = () => {
           </div>
         </div>
         <div className='col-md-6'>
-          <div className='img-Container'>
+          <div className={style.imgContainer}>
             <img src={IMAGE.ABOUT} alt="" />
           </div>
         </div>

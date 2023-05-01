@@ -11,10 +11,6 @@
     padding: 100px 50px;
     /* padding: 100px 0; */
 }
-#counter-stats #counter{
-
-
-}
 .counter-head h1{
     text-align: center;
     margin-bottom: 0;
@@ -50,5 +46,18 @@ section#counter-stats {
   color: #008080;
   font-size: 100px;
 }
+@media screen and (max-width: 768px) {
+  .counter-head h1{
+    font-size: 2rem;
+}
+.counter-head p{
+  font-size: 18px;
+}
+#stats {
+  font-size: 20px;
+}
+#counter-stats {
+  padding: 50px 10px;
+}
+}
 
-/*/ end count stats /*/
