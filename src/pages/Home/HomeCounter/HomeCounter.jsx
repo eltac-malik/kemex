@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 import style from "./HomeCounter.module.css";
+import {useTranslation} from 'react-i18next'
+
+
 export const HomeCounter = () => {
   
   
@@ -28,6 +31,13 @@ export const HomeCounter = () => {
     });
   }, []);
 
+  const {t} = useTranslation()
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage('az');
+  }, ['az','en','ru']);
+
   return (
     <section
       id={style.counter_stats}
@@ -49,7 +59,7 @@ export const HomeCounter = () => {
               <div className="counting" data-count="900000">
                 0
               </div>
-              <h5>Lines of code</h5>
+              <h5>{t('lineOfCode')}</h5>
             </div>
 
             <div className="col-lg-3" id={style.stats}>
@@ -57,7 +67,7 @@ export const HomeCounter = () => {
               <div className="counting" data-count="280">
                 0
               </div>
-              <h5>Projects done</h5>
+              <h5>{t('projectsDone')}</h5>
             </div>
 
             <div className="col-lg-3" id={style.stats}>
@@ -65,7 +75,7 @@ export const HomeCounter = () => {
               <div className="counting" data-count="75">
                 0
               </div>
-              <h5>Happy clients</h5>
+              <h5>{t('happyClients')}</h5>
             </div>
 
             <div className="col-lg-3" id={style.stats}>
@@ -73,7 +83,7 @@ export const HomeCounter = () => {
               <div className="counting" data-count="999">
                 0
               </div>
-              <h5>Cups of coffee</h5>
+              <h5>{t('cupsOfCoffee')}</h5>
             </div>
           </div>
         </div>
