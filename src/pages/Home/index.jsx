@@ -6,8 +6,15 @@ import style from "./Home.module.css";
 import {RightArrow} from "icons";
 import { HomeCounter } from "./HomeCounter/HomeCounter";
 import HomeCarousel from "./HomeCarousel/HomeCarousel";
+import {useTranslation} from 'react-i18next'
 
 const SecondSectionPart = ({ title, image }) => {
+  const {t} = useTranslation()
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage('az');
+  }, ['az','en','ru']);
   return (
     <div className={style.ss_parts} data-aos="fade-up">
       <img src={image} alt="" />
@@ -15,7 +22,7 @@ const SecondSectionPart = ({ title, image }) => {
         <div className={style.line}></div>
         <h1>{title.t1}</h1>
         <span className={style.ss_readmore}>
-          Read more{" "}
+          {t('readMore')}{" "}
           <div className={style.ss_more}>
             <RightArrow size={20} />
           </div>
@@ -34,6 +41,13 @@ export const Home = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  const {t} = useTranslation()
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage('az');
+  }, ['az','en','ru']);
 
   return (
     <div className={style.home}>
@@ -62,26 +76,12 @@ export const Home = () => {
         <div className="row" id={style.home_about}>
           <div className="col-md-6 col-12 col-sm-6 " data-aos="fade-up">
             <div className={style.text_Container}>
-              <h1>Why US?</h1>
+              <h1>{t('why_us')}</h1>
               <p>
-                Kemex International is a leading company in the industrial
-                chemicals supply chain, specializing in serving the oil sector,
-                mining, water supply, and food industries. Established in 2018
-                by a team of professionals with extensive experience in the
-                field, Kemex International has quickly become one of the market
-                leaders in the CIS region. Our mission is to provide added value
-                to our customers, optimize their costs, and offer flexibility to
-                meet their needs.
+               {t('abzas1')}
               </p>
               <p>
-                We prioritize building long-term relationships with our clients,
-                and we achieve this by delivering exceptional service and
-                focusing on their specific requirements. At Kemex International,
-                we are committed to maintaining the highest standards of
-                quality, safety, and sustainability in all aspects of our
-                business. Our team of experts is dedicated to staying up-to-date
-                with the latest developments in the industry and delivering
-                innovative solutions to meet our customers' evolving needs.
+                {t('abzas2')}
               </p>
             </div>
           </div>
@@ -103,20 +103,12 @@ export const Home = () => {
         </div>
         <div className="col_p col-md-6 col-12 col-sm-6 " data-aos="fade-up">
           <div className={style.text_Container}>
-            <h1>Why Choose Kemex International?</h1>
+            <h1>{t('whyChooseKemexInternational')}</h1>
             <p>
-              Kemex International is a company founded in 2018 by professionals
-              in the industrial chemicals supply chain. Today, we are one of the
-              market leaders in the CIS region, and we have strong partnerships
-              with companies in the oil sector, mining, water supply, and food
-              industries.
+              {t('productInfo1')}
             </p>
             <p>
-              Our top priorities at Kemex International are adding value to our
-              customers, optimizing their costs, and being flexible to meet
-              their needs. We strive to build long-term relationships with our
-              clients by focusing on these priorities and providing exceptional
-              service.
+              {t('productInfo2')}
             </p>
           </div>
         </div>
