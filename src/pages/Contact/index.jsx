@@ -8,6 +8,8 @@ import { Facebook } from "icons";
 import { Instagram } from "icons";
 import { Twitter } from "icons";
 import {useTranslation} from 'react-i18next'
+import {Footer} from '../About/Footer/Footer'
+
 
 import style from "./Contact.module.css";
 
@@ -40,6 +42,7 @@ export const Contact = () => {
   }, ['az','en','ru']);
 
   return (
+    <>
     <div className={style.contact}>
       <div className={style.form}>
         <div
@@ -193,5 +196,7 @@ export const Contact = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
