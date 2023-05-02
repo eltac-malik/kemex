@@ -10,6 +10,9 @@ import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
+
+const LANG_KEY = "selected_language";
+
 i18n
   .use(initReactI18next)
   .init({
@@ -24,23 +27,26 @@ i18n
         translation: TR_RU,
       },
     },
-    lng: "az", // varsayılan dil
-    fallbackLng: "az", // varsayılan dili belirtin
+    // local default and select lang
+    lng: localStorage.getItem(LANG_KEY) || "az",
+    fallbackLng: "az",
     interpolation: {
       escapeValue: false,
     },
   });
 
 export const BasicSelect = ({ value, onChange }) => {
-  const [lang, setLang] = React.useState("az");
+  const [lang, setLang] = React.useState(localStorage.getItem(LANG_KEY) || "az");
   const { i18n } = useTranslation();
-  
+
   const handleChange = (event) => {
     const selectedLang = event.target.value;
     setLang(selectedLang);
     i18n.changeLanguage(selectedLang);
+    // select send local
+    localStorage.setItem(LANG_KEY, selectedLang);
   };
-  
+
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>

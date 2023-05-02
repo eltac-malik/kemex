@@ -1,9 +1,19 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {IMAGE} from 'assets/img'
 import style from './Slide.module.css'
+import {useTranslation} from 'react-i18next'
 
 
 export const Slide = () => {
+
+  const {t} = useTranslation()
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage(localStorage.getItem(localStorage.getItem('selected_language') || "az"));
+  }, ['az','en','ru']);
+
+
   return (
     <div className={style.carouselExample}>
       <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -16,22 +26,22 @@ export const Slide = () => {
     <div className="carousel-item active" data-bs-interval="10000">
       <img src={IMAGE.SLIDE1} className="d-block w-100" alt="..."/>
       <div className="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5>{t('aboutFirstSlideLabel')}</h5>
+        <p>{t('aboutFirstSlidetext')}</p>
       </div>
     </div>
     <div className="carousel-item" data-bs-interval="2000">
       <img src={IMAGE.SLIDE2} className="d-block w-100" alt="..."/>
       <div className="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5>{t('aboutSecondSlideLabel')}</h5>
+        <p>{t('aboutSecondSlideText')}</p>
       </div>
     </div>
     <div className="carousel-item">
       <img src={IMAGE.SLIDE3} className="d-block w-100" alt="..."/>
       <div className="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5>{t('aboutThreeSlideLabel')}</h5>
+        <p>{t('aboutThreeSlideText')}</p>
       </div>
     </div>
   </div>
