@@ -5,6 +5,7 @@ import { Slide } from './Slider/Slide';
 import { Counter } from './Counter/Counter';
 import { Brands } from './Brands/Brands';
 import {useTranslation} from 'react-i18next'
+import { Footer } from './Footer/Footer';
 
 export const About = () => {
   const {t} = useTranslation()
@@ -47,8 +48,7 @@ export const About = () => {
           </div>
         </div>
       </div>
-      <Counter/>
-
+      <Footer/>
 
     </div>
   )

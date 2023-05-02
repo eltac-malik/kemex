@@ -6,7 +6,8 @@ import style from "./Home.module.css";
 import {RightArrow} from "icons";
 import { HomeCounter } from "./HomeCounter/HomeCounter";
 import HomeCarousel from "./HomeCarousel/HomeCarousel";
-import {useTranslation} from 'react-i18next'
+import {useTranslation} from 'react-i18next';
+import {Footer} from '../About/Footer/Footer'
 
 const SecondSectionPart = ({ title, image }) => {
   const {t} = useTranslation()
@@ -113,6 +114,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

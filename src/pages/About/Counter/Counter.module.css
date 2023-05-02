@@ -37,14 +37,14 @@ section#counter-stats {
 
 #stats {
   text-align: center;
-  font-size: 35px;
+  font-size: 27px;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
 }
 
 #stats i {
-  color: #008080;
-  font-size: 100px;
+  color: #1894b6;
+  font-size: 80px;
 }
 @media screen and (max-width: 768px) {
   .counter-head h1{
