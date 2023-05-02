@@ -12,7 +12,7 @@ export default function SearchBox({ onChange, clear }) {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    i18n.changeLanguage('az');
+    i18n.changeLanguage(localStorage.getItem('selected_language') || "az");
   }, ['az','en','ru']);
 
   return (

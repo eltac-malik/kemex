@@ -39,6 +39,13 @@ export const TR_EN = {
         sendMessage:'Send message',
         name: 'Name',
         message: 'MESSAGE',
+        aboutFirstSlideLabel: 'First slide label',
+        aboutFirstSlidetext: 'Some representative placeholder content for the first slide.',
+        aboutSecondSlideLabel: 'Second slide label',
+        aboutSecondSlideText: 'Some representative placeholder content for the second slide',
+        aboutThreeSlideLabel: 'Third slide label',
+        aboutThreeSlideText: 'Some representative placeholder content for the third slide.',
+
 
 
 

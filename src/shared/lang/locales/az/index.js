@@ -39,6 +39,13 @@ export const TR_AZ = {
         sendMessage:'Mesaj göndərin',
         name: 'AD',
         message: 'MESAJ',
+        aboutFirstSlideLabel: 'İlk slayd etiketi',
+        aboutFirstSlidetext: 'İlk slayd üçün bəzi təmsiledici yertutan məzmunu.',
+        aboutSecondSlideLabel: 'İkinci slayd etiketi',
+        aboutSecondSlideText: 'İkinci slayd üçün bəzi təmsiledici yertutan məzmunu',
+        aboutThreeSlideLabel: 'Üçüncü slayd etiketi',
+        aboutThreeSlideText: 'Üçüncü slayd üçün bəzi təmsiledici yertutan məzmunu.',
+
 
 
 

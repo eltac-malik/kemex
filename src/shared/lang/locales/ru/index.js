@@ -39,6 +39,13 @@ export const TR_RU = {
         sendMessage:'Отправить сообщение',
         name:'Имя',
         message: 'СООБЩЕНИЕ',
+        aboutFirstSlideLabel: 'Метка первого слайда',
+        aboutFirstSlidetext: 'Некоторый репрезентативный заполнитель для первого слайда.',
+        aboutSecondSlideLabel: 'Метка второго слайда',
+        aboutSecondSlideText: 'Некоторые репрезентативные заполнители для второго слайда',
+        aboutThreeSlideLabel: 'Метка третьего слайда',
+        aboutThreeSlideText: 'Некоторый репрезентативный заполнитель для третьего слайда.',
+
         
 
 
