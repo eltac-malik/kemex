@@ -6,7 +6,9 @@ import style from "./Products.module.css";
 import Header from "#/Header/index.jsx";
 import SearchBox from "#/SearchBar";
 import { useTranslation } from "react-i18next";
-import { widthByPercent } from "../../shared/common";
+import { widthByPercent } from "shared/common";
+import {Footer} from "@/About/Footer/Footer";
+
 export const Products = () => {
   const [input, setInput] = useState("");
   const [productList, setProductList] = useState([]);
@@ -31,7 +33,7 @@ export const Products = () => {
   }, ["az", "en", "ru"]);
 
   return (
-    <div className={`${style.products} h-screen w-full flex bg-gray-800 `}>
+    <div className={`${style.products} h-screen w-full flex flex-col bg-gray-800 `}>
       <main className={`${style.first_section} w-full`}>
         <div className="px-10 mt-4 mb-4">
           <Header title={t("home")} subtitle={t("products")} />
@@ -84,6 +86,7 @@ export const Products = () => {
           </div>
         </div>
       </main>
+      <Footer/>
     </div>
   );
 };
