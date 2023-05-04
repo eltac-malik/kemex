@@ -49,16 +49,16 @@ export const Contact = () => {
           className={`style.contac_info text-start max-[680px]:items-center`}
         >
           <p className={`text-red-600 text-xl font-bold`}>{t('contactUsNow')}</p>
-          <h2 className="text-5xl	mt-5 font-bold npm i react-tilt  max-[680px]:text-2xl ">
+          <h2 className="text-2xl	mt-5 font-bold text-neutral-700 w-96  max-[680px]:text-1xl ">
             {t('answerQuestions')}
           </h2>
-          <p className={`mt-5 text-2xl w-96 max-[680px]:text-xl`}>
+          <p className={`mt-5 text-2xl w-96 max-[680px]:text-xl pt-1`}>
            {t('contactText')}
           </p>
           <div className="flex flex-wrap">
             <div className={`w-44 mt-5 max-[680px]:ml-10 max-[680px]:w-full `}>
               <h3>
-                <b>{t('adress')}</b>
+                <b className="text-neutral-700">{t('adress')}</b>
               </h3>
               <p>
                 Ahmad Rajabli 1/8,
@@ -67,7 +67,7 @@ export const Contact = () => {
             </div>
             <div className={`w-44 mt-5 ml-10  max-[680px]:w-full `}>
               <h3>
-                <b>{t('email')}</b>
+                <b className="text-neutral-700">{t('email')}</b>
               </h3>
               <p>
                 <a href="mailto: info@chemical.az"> info@chemical.az</a>
@@ -77,7 +77,7 @@ export const Contact = () => {
           <div className="flex flex-wrap">
             <div className={`w-44 mt-5 max-[680px]:ml-10`}>
               <h3>
-                <b>{t('phone')}</b>
+                <b className="text-neutral-700">{t('phone')}</b>
               </h3>
               <p>
                 <a href="tel:+994125255155">+994 12 525 51 55</a>
@@ -88,7 +88,7 @@ export const Contact = () => {
             </div>
             <div className={`w-44 mt-5 ml-10`}>
               <h3>
-                <b>{t('sosialMedia')}</b>
+                <b className="text-neutral-700">{t('sosialMedia')}</b>
               </h3>
               <p className="flex gap-5 mt-4  ">
                 <Facebook className="hover:text-orange-700" />{" "}
