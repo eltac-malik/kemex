@@ -22,16 +22,3 @@
 .side_bar {
     background-color: var(--light-color);
 }
-@media (max-width:768px) {
-    .side_bar {
-        display: none;
-    }
-}
-.search_box {
-    display: none;
-}
-@media (max-width:768px) {
-    .search_box {
-        display: flex;
-    }
-}
