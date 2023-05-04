@@ -1,6 +1,6 @@
 /*** Footer ***/
 #main{
-    background-color: var(--main-color) !important;
+    background-color: var(--footer-color) !important;
 }
 #main .btn.btn-social {
     margin-right: 5px;

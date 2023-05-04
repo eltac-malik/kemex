@@ -48,7 +48,7 @@ export const BasicSelect = ({ value, onChange }) => {
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ minWidth: 70 }}>
       <FormControl fullWidth>
         <Select
           labelId="demo-simple-select-label"
