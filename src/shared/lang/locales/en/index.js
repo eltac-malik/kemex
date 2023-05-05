@@ -45,6 +45,23 @@ export const TR_EN = {
         aboutSecondSlideText: 'Some representative placeholder content for the second slide',
         aboutThreeSlideLabel: 'Third slide label',
         aboutThreeSlideText: 'Some representative placeholder content for the third slide.',
+        contactDetails:'Contact Details',
+        footercompany:'Company',
+        footerAbout:'About Us',
+        footerContact:'Contact Us',
+        footerPolicy:'Privacy Policy',
+        footerTerms:'Terms & Condition',
+        footerHelp:'Help',
+        footerGalery:'Gallery',
+        footerNews:'Newsletter',
+        footerNewsUnder:'Dolor amet sit justo amet elitr clita ipsum elitr est.',
+        footerYourMail:'Your email',
+        footerSignup:'SignUp',
+        footerCookies:'Cookies',
+
+
+
+
 
 
 

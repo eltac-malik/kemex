@@ -45,8 +45,19 @@ export const TR_AZ = {
         aboutSecondSlideText: 'İkinci slayd üçün bəzi təmsiledici yertutan məzmunu',
         aboutThreeSlideLabel: 'Üçüncü slayd etiketi',
         aboutThreeSlideText: 'Üçüncü slayd üçün bəzi təmsiledici yertutan məzmunu.',
-
-
+        contactDetails: 'Əlaqə məlumatları',
+        footercompany: 'Şirkət',
+        footerAbout:'Haqqımızda',
+        footerContact:'Bizimlə əlaqə',
+        footerPolicy:'Gizlilik Siyasəti',
+        footerTerms:'Qaydalar və Şərt',
+        footerHelp:'Kömək Etmək',
+        footerGalery:'Qalereya',
+        footerNews:'Xəbər bülleteni',
+        footerNewsUnder:'Dolor amet sit justo amet elitr clita ipsum elitr est.',
+        footerYourMail:'E-poçtunuz',
+        footerSignup:'Abunə olun',
+        footerCookies:'Kukilər',
 
 
 

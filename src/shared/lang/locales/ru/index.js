@@ -45,9 +45,19 @@ export const TR_RU = {
         aboutSecondSlideText: 'Некоторые репрезентативные заполнители для второго слайда',
         aboutThreeSlideLabel: 'Метка третьего слайда',
         aboutThreeSlideText: 'Некоторый репрезентативный заполнитель для третьего слайда.',
-
-        
-
+        contactDetails:'Контактная Информация',
+        footercompany:'Компания',
+        footerAbout:'О Нас',
+        footerContact:'Связаться с нами',
+        footerPolicy:'Политика Kонфиденциальности',
+        footerTerms:'Условия и Положения',
+        footerHelp:'Помощь',
+        footerGalery:'Галерея',
+        footerNews:'Новостная рассылка',
+        footerNewsUnder:'Dolor amet sit justo amet elitr clita ipsum elitr est.',
+        footerYourMail:'Ваш адрес электронной почты',
+        footerSignup:'Зарегистрироваться',
+        footerCookies:'Печенье',
 
 
 
