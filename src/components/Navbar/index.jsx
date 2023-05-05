@@ -10,6 +10,8 @@ import {Phone} from 'icons'
 import {IMAGE} from 'assets/img'
 
 import style from './Navbar.module.css'
+import Sidebar from '../Sidebar'
+
 
 export const Navbar = () => {
   const {t} = useTranslation()
@@ -20,9 +22,10 @@ export const Navbar = () => {
   }, ['az','en','ru']);
 
   return (
-    <div className={style.navbar}>
-        <p className={style.logo}><img src={IMAGE.LOGO_PNG} /></p>
-        <ul className={style.ul}>
+    <div className={`${style.navbar} `}>
+      <Sidebar />
+        <p className={`${style.logo}`}><img src={IMAGE.LOGO_PNG} /></p>
+        <ul className={`${style.ul} `}>
             <Link className='link' to='/'>{t('home')}</Link>
             <Link className='link' to='/about'>{t('about')}</Link>
             <Link className='link' to='/products'>{t('products')}</Link>
