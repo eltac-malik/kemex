@@ -31,3 +31,16 @@
     color: var(--light-color);
     transition: 0.3s;
 }
+
+
+@media (max-width: 768px) {
+    .ul {
+      display: none;
+    }
+    .logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+  }
