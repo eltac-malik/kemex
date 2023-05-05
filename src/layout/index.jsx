@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useEffect} from 'react';
 import { useSnapshot } from "valtio";
 
 import Drawer from "@mui/material/Drawer";
@@ -16,6 +16,7 @@ import { Navbar } from "#/Navbar";
 import { state } from "state";
 import { widthByPercent } from "shared/common";
 import { useScreen } from "shared/hooks";
+import {useTranslation} from 'react-i18next'
 
 const initialValues = {
   name: "",
@@ -31,6 +32,7 @@ const validationSchema = Yup.object().shape({
     .required("Please enter your email"),
   message: Yup.string().required("Please enter your message"),
 });
+
 
 export const Layout = ({ children }) => {
   const snap = useSnapshot(state);
@@ -51,6 +53,13 @@ export const Layout = ({ children }) => {
     state.drawer = false;
   };
 
+  const {t} = useTranslation()
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage(localStorage.getItem(localStorage.getItem('selected_language') || "az"));
+  }, ['az','en','ru']);
+
   return (
     <div>
       {["right"].map((anchor) => (
@@ -69,15 +78,15 @@ export const Layout = ({ children }) => {
               />
 
               <h1 className={`text-orange-600  text-center text-2xl/[45px]`}>
-                Contact Details
+                {t('contactDetails')}
               </h1>
               <ul className="bg-gray-200 p-2 m-2 rounded-lg">
                 <li className="text-lg text-gray-700">
-                  Address: 123 Main Street, City, State
+                  {t('adress')}: 123 Main Street, City, State
                 </li>
-                <li className="text-lg text-gray-700">Phone: 555-1234</li>
+                <li className="text-lg text-gray-700">{t('phone')}: 555-1234</li>
                 <li className="text-lg text-gray-700">
-                  Email: example@example.com
+                  {t('email')}: example@example.com
                 </li>
               </ul>
               <Formik
@@ -93,14 +102,14 @@ export const Layout = ({ children }) => {
                       <h1
                         className={`text-orange-600 text-center p-2 text-2xl/[45px]`}
                       >
-                        HAPPY TO ANSWER YOUR QUESTIONS
+                        {t('answerQuestions')}
                       </h1>
                     </label>
                     <label
                       htmlFor="name"
                       className="block text-gray-700 font-bold mb-2"
                     >
-                      Name:
+                      {t('name')}:
                     </label>
                     <Field
                       type="text"
@@ -116,7 +125,7 @@ export const Layout = ({ children }) => {
                       htmlFor="email"
                       className="block text-gray-700 font-bold mb-2"
                     >
-                      Email:
+                      {t('email')}:
                     </label>
                     <Field
                       type="email"
@@ -132,7 +141,7 @@ export const Layout = ({ children }) => {
                       htmlFor="message"
                       className="block text-gray-700 font-bold mb-2"
                     >
-                      Message:
+                      {t('message')}:
                     </label>
                     <Field
                       as="textarea"
@@ -153,7 +162,7 @@ export const Layout = ({ children }) => {
                       </button>
                     </div>
                     <div>
-                      <div className="ml-1.5">Social</div>
+                      <div className="ml-1.0">{t('sosialMedia')}</div>
                       <div className="flex flex-row gap-2 cursor-pointer  ">
                         <Facebook className="hover:text-orange-700 hover:animate-pulse" />
                         <Instagram className="hover:text-orange-700 hover:animate-pulse " />
