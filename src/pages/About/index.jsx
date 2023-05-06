@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import React from 'react'
 import {IMAGE} from 'assets/img'
 import style from './About.module.css';
 import { Slide } from './Slider/Slide';
@@ -8,11 +8,7 @@ import { Footer } from '#/Footer/Footer';
 
 export const About = () => {
   const {t} = useTranslation()
-  const { i18n } = useTranslation();
 
-  useEffect(() => {
-    i18n.changeLanguage(localStorage.getItem('selected_language') || "az");
-  }, ['az','en','ru']);
   return (
     <div>
       <Slide/>

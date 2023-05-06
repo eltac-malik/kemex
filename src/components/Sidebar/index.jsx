@@ -1,5 +1,5 @@
 
-import * as React from 'react';
+import  React,{useEffect} from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
@@ -11,7 +11,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import { Side } from 'assets/icons';
+import { Side } from '../../assets/icons';
+import {useTranslation} from 'react-i18next';
 
 export default function Sidebar() {
   const [state, setState] = React.useState({
@@ -29,6 +30,15 @@ export default function Sidebar() {
     setState({ ...state, [anchor]: open });
   };
 
+
+  const {t} = useTranslation()
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage(localStorage.getItem('selected_language') || "az");
+  }, ['az','en','ru']);
+
+  
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
@@ -37,13 +47,13 @@ export default function Sidebar() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Home', 'About', 'Products', 'Contact'].map((text, index) => (
+        {[`home`, `about`, `products`, `contact`].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={t(text)} />
             </ListItemButton>
           </ListItem>
         ))}

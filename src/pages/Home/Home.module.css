@@ -36,8 +36,8 @@
   overflow: hidden;
   position: relative;
 }
-.ss_parts h1 {
-  font-size: 40px;
+.ss_parts h2 {
+  font-size: 30px;
   color: white;
   margin-bottom: 10px;
   text-transform: uppercase;

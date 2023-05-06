@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import { IMAGE } from "assets/img";
 import { mainTitles } from "shared/constant";
 import style from "./Home.module.css";
@@ -9,18 +8,14 @@ import {useTranslation} from 'react-i18next';
 import {Footer} from '../../components/Footer/Footer'
 
 const SecondSectionPart = ({ title, image }) => {
-  const {t,i18n} = useTranslation()
-
-  useEffect(() => {
-    i18n.changeLanguage('az');
-  }, ['az','en','ru']);
+  const {t} = useTranslation()
 
   return (
     <div className={style.ss_parts} data-aos="fade-up">
       <img src={image} />
       <div className={style.ss_textarea}>
         <div className={style.line}></div>
-        <h1>{t(`${title.t1}`)}</h1>
+        <h2>{t(`${title.t1}`)}</h2>
         <span className={style.ss_readmore}>
           {t('readMore')}{" "}
           <div className={style.ss_more}>
@@ -43,18 +38,13 @@ export const Home = () => {
   }, []);
 
   const {t} = useTranslation()
-  const { i18n } = useTranslation();
-
-  useEffect(() => {
-    i18n.changeLanguage(localStorage.getItem('selected_language') || "az");
-  }, ['az','en','ru']);
-
+ 
   return (
     <div className={style.home}>
       <div className={style.first_section}>
         <div className={style.data} data-aos="fade-up">
-          <h1>{t(`${mainTitles[count].t1}`)}</h1>
-          <h2>{t(`${mainTitles[count].t2}`)}</h2>
+          <h1>{t(mainTitles[count].t1)}</h1>
+          <h2>{t(mainTitles[count].t2)}</h2>
         </div>
         <p className={style.employeers} data-aos="zoom-in-down">
           <img src={IMAGE.EMPLOYEERS} alt="" />

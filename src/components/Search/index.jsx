@@ -1,16 +1,19 @@
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import {useTranslation} from 'react-i18next'
 
 export const Search = (
     {
     onChange,
-    placeholder='Axtar'
+    placeholder='searchBar'
     }
     )=> {
+      const {t} = useTranslation();
+
   return (
     <div className='w-full'>
       <TextField 
-      placeholder={placeholder}
+      placeholder={t(placeholder)}
       className='w-full'
       onChange={onChange}
     />

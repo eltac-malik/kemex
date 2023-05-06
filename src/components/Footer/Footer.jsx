@@ -9,12 +9,7 @@ import {useTranslation} from 'react-i18next'
 export const Footer = () => {
 
     const {t} = useTranslation()
-  const { i18n } = useTranslation();
-
-  useEffect(() => {
-    i18n.changeLanguage(localStorage.getItem(localStorage.getItem('selected_language') || "az"));
-  }, ['az','en','ru']);
-
+    
   return (
     <div className="container-fluid bg-dark text-light footer pt-5  wow fadeIn" id={Style.main} data-wow-delay="0.1s">
     <div className="container py-5">

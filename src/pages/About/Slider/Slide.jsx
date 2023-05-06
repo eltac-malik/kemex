@@ -7,13 +7,7 @@ import {useTranslation} from 'react-i18next'
 export const Slide = () => {
 
   const {t} = useTranslation()
-  const { i18n } = useTranslation();
-
-  useEffect(() => {
-    i18n.changeLanguage(localStorage.getItem(localStorage.getItem('selected_language') || "az"));
-  }, ['az','en','ru']);
-
-
+ 
   return (
     <div className={style.carouselExample}>
       <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">

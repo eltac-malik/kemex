@@ -35,12 +35,7 @@ const initialValues = {
 export const Contact = () => {
 
   const {t} = useTranslation()
-  const { i18n } = useTranslation();
-
-  useEffect(() => {
-    i18n.changeLanguage(localStorage.getItem('selected_language') || "az");
-  }, ['az','en','ru']);
-
+ 
   return (
     <>
     <div className={style.contact}>

@@ -9,6 +9,7 @@ import { TR_RU } from "../../shared/lang/locales/ru";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import style from "./Select.module.css";
 
 
 const LANG_KEY = "selected_language";
@@ -29,7 +30,7 @@ i18n
     },
     // local default and select lang
     lng: localStorage.getItem(LANG_KEY) || "az",
-    fallbackLng: "az",
+    fallbackLng: 'az',
     interpolation: {
       escapeValue: false,
     },
@@ -38,6 +39,7 @@ i18n
 export const BasicSelect = ({ value, onChange }) => {
   const [lang, setLang] = React.useState(localStorage.getItem(LANG_KEY) || "az");
   const { i18n } = useTranslation();
+  
 
   const handleChange = (event) => {
     const selectedLang = event.target.value;
@@ -47,16 +49,17 @@ export const BasicSelect = ({ value, onChange }) => {
   };
 
   return (
-      <div>
+      <div className={style.boxlang}>
         <Select
+          className={style.selectlang}
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={lang}
           onChange={handleChange}
         >
-          <MenuItem value={"az"}>AZ</MenuItem>
-          <MenuItem value={"en"}>EN</MenuItem>
-          <MenuItem value={"ru"}>RU</MenuItem>
+          <MenuItem   value={"az"}><span className={style.menutext}>AZ</span></MenuItem>
+          <MenuItem   value={"en"}><span className={style.menutext}>EN</span></MenuItem>
+          <MenuItem   value={"ru"}><span className={style.menutext}>RU</span></MenuItem>
         </Select>
       </div>
   );
