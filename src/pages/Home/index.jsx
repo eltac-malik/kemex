@@ -9,11 +9,7 @@ import {useTranslation} from 'react-i18next';
 import {Footer} from '../../components/Footer/Footer'
 
 const SecondSectionPart = ({ title, image }) => {
-  const {t,i18n} = useTranslation()
-
-  useEffect(() => {
-    i18n.changeLanguage('az');
-  }, ['az','en','ru']);
+  const {t} = useTranslation()
 
   return (
     <div className={style.ss_parts} data-aos="fade-up">
@@ -33,6 +29,7 @@ const SecondSectionPart = ({ title, image }) => {
 };
 
 export const Home = () => {
+  const {t} = useTranslation()
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -41,13 +38,6 @@ export const Home = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
-  const {t} = useTranslation()
-  const { i18n } = useTranslation();
-
-  useEffect(() => {
-    i18n.changeLanguage(localStorage.getItem('selected_language') || "az");
-  }, ['az','en','ru']);
 
   return (
     <div className={style.home}>
