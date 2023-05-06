@@ -43,13 +43,11 @@ export const BasicSelect = ({ value, onChange }) => {
     const selectedLang = event.target.value;
     setLang(selectedLang);
     i18n.changeLanguage(selectedLang);
-    // select send local
     localStorage.setItem(LANG_KEY, selectedLang);
   };
 
   return (
-    <Box sx={{ minWidth: 70 }}>
-      <FormControl fullWidth>
+      <div>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
@@ -60,7 +58,6 @@ export const BasicSelect = ({ value, onChange }) => {
           <MenuItem value={"en"}>EN</MenuItem>
           <MenuItem value={"ru"}>RU</MenuItem>
         </Select>
-      </FormControl>
-    </Box>
+      </div>
   );
 };
