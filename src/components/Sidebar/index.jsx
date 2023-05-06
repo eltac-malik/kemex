@@ -47,9 +47,17 @@ export default function Sidebar() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {[`home`, `about`, `products`, `contact`].map((text, index) => (
+        <ListItem key="home" disablePadding>
+          <ListItemButton component="a" href="/">
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary={t('home')} />
+          </ListItemButton>
+        </ListItem>
+        {[`about`, `products`, `contact`].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton component="a" href={`/${text}`}>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
