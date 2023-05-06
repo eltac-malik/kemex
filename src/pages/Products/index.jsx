@@ -1,29 +1,25 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
-import { Product } from "./Product";
 import Header from "#/Header/index.jsx";
 import {Search} from '#/Search'
-import { useTranslation } from "react-i18next";
 import { Footer } from "#/Footer/Footer";
+
+import { Product } from "./Product";
 
 import { products } from "shared/mock";
 
 import style from "./Products.module.css";
 
 export const Products = () => {
+  const { t } = useTranslation();
+
   const [input, setInput] = useState("");
   const [productList, setProductList] = useState([]);
 
   useEffect(() => setProductList(products), []);
 
   const handleFilter = (e) => setInput(e)
-
-  const handleClear = () => {
-    setProductList(products);
-    setInput("");
-  };
-
-  const { t } = useTranslation();
 
   return (
     <div

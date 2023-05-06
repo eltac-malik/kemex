@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
-import { IMAGE } from "assets/img";
-import { mainTitles } from "shared/constant";
-import style from "./Home.module.css";
-import {RightArrow} from "icons";
-import HomeCarousel from "./HomeCarousel/HomeCarousel";
 import {useTranslation} from 'react-i18next';
-import {Footer} from '../../components/Footer/Footer'
+
+
+import {RightArrow} from "icons";
+import { mainTitles } from "shared/constant";
+import HomeCarousel from "./HomeCarousel/HomeCarousel";
+import {Footer} from '#/Footer/Footer'
+
+import { IMAGE } from "assets/img";
+import style from "./Home.module.css";
+
 
 const SecondSectionPart = ({ title, image }) => {
   const {t} = useTranslation()
@@ -15,7 +19,7 @@ const SecondSectionPart = ({ title, image }) => {
       <img src={image} />
       <div className={style.ss_textarea}>
         <div className={style.line}></div>
-        <h2>{t(`${title.t1}`)}</h2>
+        <h1>{t(`${title.t1}`)}</h1>
         <span className={style.ss_readmore}>
           {t('readMore')}{" "}
           <div className={style.ss_more}>
@@ -28,6 +32,7 @@ const SecondSectionPart = ({ title, image }) => {
 };
 
 export const Home = () => {
+  const {t} = useTranslation()
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -37,14 +42,12 @@ export const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const {t} = useTranslation()
- 
   return (
     <div className={style.home}>
       <div className={style.first_section}>
         <div className={style.data} data-aos="fade-up">
-          <h1>{t(mainTitles[count].t1)}</h1>
-          <h2>{t(mainTitles[count].t2)}</h2>
+          <h1>{t(`${mainTitles[count].t1}`)}</h1>
+          <h2>{t(`${mainTitles[count].t2}`)}</h2>
         </div>
         <p className={style.employeers} data-aos="zoom-in-down">
           <img src={IMAGE.EMPLOYEERS} alt="" />
