@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { state } from "state";
@@ -21,7 +21,7 @@ export const Navbar = () => {
     i18n.changeLanguage(
       localStorage.getItem(localStorage.getItem("selected_language") || "az")
     );
-  }, ["az", "en", "ru"]);
+  }, [localStorage.getItem("selected_language")]);
 
   return (
     <div className={`${style.navbar} `}>

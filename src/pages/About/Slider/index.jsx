@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-
 import { IMAGE } from "assets/img";
 import style from "./Slide.module.css";
 
