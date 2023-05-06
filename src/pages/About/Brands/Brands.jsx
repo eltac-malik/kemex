@@ -1,15 +1,11 @@
-import React, {useEffect} from 'react'
+import {useTranslation} from 'react-i18next'
+
 import {IMAGE} from 'assets/img'
 import style from './Brands.module.css';
-import {useTranslation} from 'react-i18next'
 
 export const Brands = () => {
     const {t} = useTranslation()
-  const { i18n } = useTranslation();
 
-  useEffect(() => {
-    i18n.changeLanguage(localStorage.getItem('selected_language') || "az");
-  }, ['az','en','ru']);
   return (
     <div className={style.brands}>
         <div className={style.partners}>

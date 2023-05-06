@@ -1,21 +1,22 @@
-import React, {useEffect} from 'react'
+import {useEffect} from 'react'
 import {Link} from 'react-router-dom'
 
 import {state} from 'state'
 import {useTranslation} from 'react-i18next'
 
 import {BasicSelect} from '#/Select'
+import Sidebar from '#/Sidebar'
 import {Phone} from 'icons'
 
 import {IMAGE} from 'assets/img'
+import {useScreen} from 'shared/hooks'
 
 import style from './Navbar.module.css'
-import Sidebar from '../Sidebar'
 
 
 export const Navbar = () => {
-  const {t} = useTranslation()
-  const { i18n } = useTranslation();
+  const {t,i18n} = useTranslation();
+  const isMobile = useScreen()
 
   useEffect(() => {
     i18n.changeLanguage(localStorage.getItem(localStorage.getItem('selected_language') || "az"));
@@ -23,7 +24,7 @@ export const Navbar = () => {
 
   return (
     <div className={`${style.navbar} `}>
-      <Sidebar />
+        {!isMobile && <Sidebar/>}
         <p className={`${style.logo}`}><img src={IMAGE.LOGO_PNG} /></p>
         <ul className={`${style.ul} `}>
             <Link className='link' to='/'>{t('home')}</Link>

@@ -65,28 +65,16 @@ export const Footer = () => {
             <div className="col-lg-3 col-md-6">
                 <h4 className="text-white mb-3">{t('footerNews')}</h4>
                 <p>{t('footerNewsUnder')}</p>
-                <div className="position-relative mx-auto">
-                    <input className="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder={t('footerYourMail')}/>
-                    <button type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">{t('footerSignup')}</button>
-                </div>
             </div>
         </div>
     </div>
-    <div className="container">
+    <div className="container pb-10">
         <div className="copyright">
             <div className="row">
                 <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     &copy; <Link className="border-bottom" to="#">Kemex</Link>, All Right Reserved.
 
                   <Link className="border-bottom" to="https://htmlcodex.com">HTML Codex</Link>
-                </div>
-                <div className="col-md-6 text-center text-md-end">
-                    <div className="footer-menu">
-                        <Link to="">{t('home')}</Link>
-                        <Link to="">{t('footerCookies')}</Link>
-                        <Link to="">{t('footerHelp')}</Link>
-                        
-                    </div>
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import { Side } from '../../assets/icons';
+import { Side } from 'assets/icons';
 
 export default function Sidebar() {
   const [state, setState] = React.useState({
@@ -54,10 +54,11 @@ export default function Sidebar() {
 
   return (
     <div>
-      {[''].map((anchor) => (
+      {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>
-            <Side classNAme="" size-20 />{anchor}</Button>
+          <div onClick={toggleDrawer(anchor, true)}>
+            <Side/>
+          </div>
           <Drawer
             anchor={anchor}
             open={state[anchor]}

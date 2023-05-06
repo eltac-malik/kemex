@@ -1,27 +1,26 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { IMAGE } from "assets/img";
 import { mainTitles } from "shared/constant";
 import style from "./Home.module.css";
 import {RightArrow} from "icons";
-import { HomeCounter } from "./HomeCounter/HomeCounter";
 import HomeCarousel from "./HomeCarousel/HomeCarousel";
 import {useTranslation} from 'react-i18next';
-import {Footer} from '../About/Footer/Footer'
+import {Footer} from '../../components/Footer/Footer'
 
 const SecondSectionPart = ({ title, image }) => {
-  const {t} = useTranslation()
-  const { i18n } = useTranslation();
+  const {t,i18n} = useTranslation()
 
   useEffect(() => {
     i18n.changeLanguage('az');
   }, ['az','en','ru']);
+
   return (
     <div className={style.ss_parts} data-aos="fade-up">
-      <img src={image} alt="" />
+      <img src={image} />
       <div className={style.ss_textarea}>
         <div className={style.line}></div>
-        <h1>{title.t1}</h1>
+        <h1>{t(`${title.t1}`)}</h1>
         <span className={style.ss_readmore}>
           {t('readMore')}{" "}
           <div className={style.ss_more}>
@@ -54,8 +53,8 @@ export const Home = () => {
     <div className={style.home}>
       <div className={style.first_section}>
         <div className={style.data} data-aos="fade-up">
-          <h1>{mainTitles[count].t1}</h1>
-          <h2>{mainTitles[count].t2}</h2>
+          <h1>{t(`${mainTitles[count].t1}`)}</h1>
+          <h2>{t(`${mainTitles[count].t2}`)}</h2>
         </div>
         <p className={style.employeers} data-aos="zoom-in-down">
           <img src={IMAGE.EMPLOYEERS} alt="" />
@@ -73,7 +72,6 @@ export const Home = () => {
         />
       </div>
       <div>
-        <HomeCounter />
         <div className="row" id={style.home_about}>
           <div className="col-md-6 col-12 col-sm-6 " data-aos="fade-up">
             <div className={style.text_Container}>

@@ -8,7 +8,7 @@ import { Facebook } from "icons";
 import { Instagram } from "icons";
 import { Twitter } from "icons";
 import {useTranslation} from 'react-i18next'
-import {Footer} from '../About/Footer/Footer'
+import {Footer} from '#/Footer/Footer'
 
 
 import style from "./Contact.module.css";

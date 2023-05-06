@@ -1,19 +1,14 @@
-import React, {useEffect} from "react";
+import {useTranslation} from 'react-i18next';
+
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-import { IconButton } from "@mui/material";
 import ClearIcon from "@mui/icons-material/Clear";
+
 import { products } from "shared/mock";
-import {useTranslation} from 'react-i18next';
 
 
 export default function SearchBox({ onChange, clear }) {
   const {t} = useTranslation()
-  const { i18n } = useTranslation();
-
-  useEffect(() => {
-    i18n.changeLanguage(localStorage.getItem('selected_language') || "az");
-  }, ['az','en','ru']);
 
   return (
     <Autocomplete
