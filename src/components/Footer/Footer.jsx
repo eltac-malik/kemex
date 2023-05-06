@@ -67,9 +67,9 @@ export const Footer = () => {
         <div className="copyright">
             <div className="row">
                 <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <Link className="border-bottom" to="#">Kemex</Link>, All Right Reserved.
-
-                  <Link className="border-bottom" to="https://htmlcodex.com">HTML Codex</Link>
+                    &copy; <Link className="border-bottom " to="#">Kemex</Link>, All Right Reserved.
+                        
+                  <div className="border-bottom mt-2 bg-gradient-to-r from-amber-200 to-yellow-400 bg-clip-text text-transparent" > Designed By PARAMETRIC</div>
                 </div>
             </div>
         </div>
