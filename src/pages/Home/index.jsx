@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
+import {useTranslation} from 'react-i18next';
+
+
+import {RightArrow} from "icons";
+import { mainTitles } from "shared/constant";
+import HomeCarousel from "./HomeCarousel/HomeCarousel";
+import {Footer} from '#/Footer/Footer'
 
 import { IMAGE } from "assets/img";
-import { mainTitles } from "shared/constant";
 import style from "./Home.module.css";
-import {RightArrow} from "icons";
-import HomeCarousel from "./HomeCarousel/HomeCarousel";
-import {useTranslation} from 'react-i18next';
-import {Footer} from '../../components/Footer/Footer'
+
 
 const SecondSectionPart = ({ title, image }) => {
   const {t} = useTranslation()
