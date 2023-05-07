@@ -14,14 +14,15 @@ import { useScreen } from "shared/hooks";
 import style from "./Navbar.module.css";
 
 export const Navbar = () => {
-  const { t, i18n } = useTranslation();
+ 
   const isMobile = useScreen();
 
+  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+
   useEffect(() => {
-    i18n.changeLanguage(
-      localStorage.getItem(localStorage.getItem("selected_language") || "az")
-    );
-  }, [localStorage.getItem("selected_language")]);
+    i18n.changeLanguage(localStorage.getItem("selected_language") || "az");
+  }, ["az", "en", "ru"]);
 
   return (
     <div className={`${style.navbar} `}>
